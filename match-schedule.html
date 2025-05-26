@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Schedule - Kajo Keji Local Football Association</title>
+    <meta name="description" content="View the complete match schedule for Kajo Keji Local Football Association teams, including upcoming fixtures, results, and tournament information">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/gallery/kklfa.jpeg" alt="KKLFA Logo" style="height: 40px;">
+                </a>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="objectives.html">Objectives</a>
+                    <a href="committees.html">Committees</a>
+                    <a href="events.html">Events</a>
+                    <a href="players.html">Players</a>
+                    <a href="match-schedule.html">Match Schedule</a>
+                    
+                    <div class="dropdown">
+                        <a href="#">More</a>
+                        <div class="dropdown-content">
+                            <a href="gallery.html">Gallery</a>
+                            <a href="fan-zone.html">Fan Zone</a>
+                            <a href="news.html">News</a>
+                            <a href="achievements.html">Achievements</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                    
+                    <a href="join.html" class="btn btn-primary">Join Us</a>
+                    <a href="donate.html" class="btn btn-secondary">Donate</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="background-color: var(--primary-color);">
+        <div class="container">
+            <div class="hero-content animate-on-scroll">
+                <h1>Match Schedule</h1>
+                <p>Complete fixture list for all KKLFA teams and competitions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Filter Section -->
+    <section class="section">
+        <div class="container">
+            <div class="filter-container animate-on-scroll">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-competition="all">All Competitions</button>
+                    <button class="filter-tab" data-competition="premier">Premier League</button>
+                    <button class="filter-tab" data-competition="cup">Kajo Keji Cup</button>
+                    <button class="filter-tab" data-competition="women">Women's League</button>
+                    <button class="filter-tab" data-competition="youth">Youth Competitions</button>
+                </div>
+                
+                <div class="search-filter">
+                    <input type="text" id="match-search" placeholder="Search teams...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            
+            <div class="date-filter animate-on-scroll">
+                <button class="date-filter-btn active" data-filter="upcoming">Upcoming Matches</button>
+                <button class="date-filter-btn" data-filter="past">Past Results</button>
+                <button class="date-filter-btn" data-filter="all">All Fixtures</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Matches Section -->
+    <section id="upcoming-matches" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Upcoming Matches</h2>
+                <p>Next fixtures for KKLFA teams</p>
+            </div>
+            
+            <div class="matches-container animate-on-scroll">
+                <!-- Premier League Matches -->
+                <div class="competition-group" data-competition="premier">
+                    <h3>KKLFA Premier League</h3>
+                    
+                    <!-- Match 1 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">JUN</span>
+                                <span class="day">15</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">3:00 PM</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji Stars" class="team-logo">
+                                    <span class="team-name">Kajo Keji Stars</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="vs">VS</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/fan5.jpeg" alt="Kajo Keji United" class="team-logo">
+                                    <span class="team-name">Kajo Keji United</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Kajo Keji Stadium</span>
+                                <span><i class="fas fa-trophy"></i> Premier League - Round 10</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Details</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Match 2 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">JUN</span>
+                                <span class="day">22</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">3:30 PM</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji City" class="team-logo">
+                                    <span class="team-name">Kajo Keji Town</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="vs">VS</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/fan2.jpeg" alt="Kajo Keji Stars" class="team-logo">
+                                    <span class="team-name">Kajo Keji Stars</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> City Stadium</span>
+                                <span><i class="fas fa-trophy"></i> Premier League - Round 11</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Details</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Match 3 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">JUN</span>
+                                <span class="day">29</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">4:00 PM</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/fan6.jpeg" alt="Kajo Keji Stars" class="team-logo">
+                                    <span class="team-name">Kajo Keji Stars</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="vs">VS</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/player6.jpeg" alt="Kajo Keji Rovers" class="team-logo">
+                                    <span class="team-name">Kajo Keji Rovers</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Kajo Keji Stadium</span>
+                                <span><i class="fas fa-trophy"></i> Premier League - Round 12</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Details</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kajo Keji Cup Matches -->
+                <div class="competition-group" data-competition="cup">
+                    <h3>Kajo Keji Cup</h3>
+                    
+                    <!-- Match 1 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">JUL</span>
+                                <span class="day">05</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">2:00 PM</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/fan3.jpeg" alt="Kajo Keji Stars" class="team-logo">
+                                    <span class="team-name">Kajo Keji Stars</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="vs">VS</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/player3.jpeg" alt="Kajo Keji Athletic" class="team-logo">
+                                    <span class="team-name">Kajo Keji Athletic</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Kajo Keji Stadium</span>
+                                <span><i class="fas fa-trophy"></i> Kajo Keji Cup - Quarter Final</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Details</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Match 2 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">JUL</span>
+                                <span class="day">05</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">4:30 PM</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/fan9.jpeg" alt="Kajo Keji United" class="team-logo">
+                                    <span class="team-name">Kajo Keji United</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="vs">VS</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/player9.jpeg" alt="Kajo Keji City" class="team-logo">
+                                    <span class="team-name">Kajo Keji City</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Kajo Keji Stadium</span>
+                                <span><i class="fas fa-trophy"></i> Kajo Keji Cup - Quarter Final</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Details</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Women's League Matches -->
+                <div class="competition-group" data-competition="women">
+                    <h3>KKLFA Women's League</h3>
+                    
+                    <!-- Match 1 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">JUN</span>
+                                <span class="day">16</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">1:00 PM</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/player1.jpeg" alt="Kajo Keji Queens" class="team-logo">
+                                    <span class="team-name">Kajo Keji Queens</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="vs">VS</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/player4.jpeg" alt="Kajo Keji Ladies" class="team-logo">
+                                    <span class="team-name">Kajo Keji Ladies</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Kajo Keji Stadium</span>
+                                <span><i class="fas fa-trophy"></i> Women's League - Round 8</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Details</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Youth Competitions Matches -->
+                <div class="competition-group" data-competition="youth">
+                    <h3>KKLFA Youth Competitions</h3>
+                    
+                    <!-- Match 1 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">JUN</span>
+                                <span class="day">17</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">10:00 AM</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/fan5" alt="Kajo Keji Stars U17" class="team-logo">
+                                    <span class="team-name">Kajo Keji Stars U17</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="vs">VS</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/fan11.jpeg" alt="Kajo Keji United U17" class="team-logo">
+                                    <span class="team-name">Kajo Keji United U17</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> KKLFA Training Center</span>
+                                <span><i class="fas fa-trophy"></i> U17 League - Round 6</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Details</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Match 2 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">JUN</span>
+                                <span class="day">18</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">9:00 AM</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji Stars U14" class="team-logo">
+                                    <span class="team-name">Kajo Keji Stars U14</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="vs">VS</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/img.jpeg" alt="Kajo Keji City U14" class="team-logo">
+                                    <span class="team-name">Kajo Keji City U14</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> KKLFA Training Center</span>
+                                <span><i class="fas fa-trophy"></i> U14 League - Round 5</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Details</a>
+                                <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Results Section -->
+    <section id="past-results" class="section" style="display: none;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Past Results</h2>
+                <p>Recent match results for KKLFA teams</p>
+            </div>
+            
+            <div class="matches-container animate-on-scroll">
+                <!-- Premier League Results -->
+                <div class="competition-group" data-competition="premier">
+                    <h3>KKLFA Premier League</h3>
+                    
+                    <!-- Match 1 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">MAY</span>
+                                <span class="day">25</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">FULL TIME</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji Rovers" class="team-logo">
+                                    <span class="team-name">Kajo Keji Rovers</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="score">1 - 2</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/img.jpeg" alt="Kajo Keji Stars" class="team-logo">
+                                    <span class="team-name">Kajo Keji Stars</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Rovers Stadium</span>
+                                <span><i class="fas fa-trophy"></i> Premier League - Round 8</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Report</a>
+                                <a href="#" class="btn btn-sm btn-outline">Highlights</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Match 2 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">MAY</span>
+                                <span class="day">18</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">FULL TIME</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji Stars" class="team-logo">
+                                    <span class="team-name">Kajo Keji Stars</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="score">3 - 0</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/img.jpeg" alt="Kajo Keji Athletic" class="team-logo">
+                                    <span class="team-name">Kajo Keji Athletic</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Kajo Keji Stadium</span>
+                                <span><i class="fas fa-trophy"></i> Premier League - Round 7</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Report</a>
+                                <a href="#" class="btn btn-sm btn-outline">Highlights</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kajo Keji Cup Results -->
+                <div class="competition-group" data-competition="cup">
+                    <h3>Kajo Keji Cup</h3>
+                    
+                    <!-- Match 1 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">MAY</span>
+                                <span class="day">12</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">FULL TIME</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/img.jpeg" alt="Kajo Keji Stars" class="team-logo">
+                                    <span class="team-name">Kajo Keji Stars</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="score">2 - 1</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji FC" class="team-logo">
+                                    <span class="team-name">Kajo Keji FC</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Kajo Keji Stadium</span>
+                                <span><i class="fas fa-trophy"></i> Kajo Keji Cup - Round of 16</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Report</a>
+                                <a href="#" class="btn btn-sm btn-outline">Highlights</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Women's League Results -->
+                <div class="competition-group" data-competition="women">
+                    <h3>KKLFA Women's League</h3>
+                    
+                    <!-- Match 1 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">MAY</span>
+                                <span class="day">19</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">FULL TIME</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji Ladies" class="team-logo">
+                                    <span class="team-name">Kajo Keji Ladies</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="score">1 - 3</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/img.jpeg" alt="Kajo Keji Queens" class="team-logo">
+                                    <span class="team-name">Kajo Keji Queens</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Community Field</span>
+                                <span><i class="fas fa-trophy"></i> Women's League - Round 7</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Report</a>
+                                <a href="#" class="btn btn-sm btn-outline">Highlights</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Youth Competitions Results -->
+                <div class="competition-group" data-competition="youth">
+                    <h3>KKLFA Youth Competitions</h3>
+                    
+                    <!-- Match 1 -->
+                    <div class="match-card">
+                        <div class="match-date">
+                            <div class="date-box">
+                                <span class="month">MAY</span>
+                                <span class="day">20</span>
+                                <span class="year">2025</span>
+                            </div>
+                            <span class="time">FULL TIME</span>
+                        </div>
+                        
+                        <div class="match-details">
+                            <div class="match-teams">
+                                <div class="team home-team">
+                                    <img src="images/gallery/img.jpeg" alt="Kajo Keji Stars U17" class="team-logo">
+                                    <span class="team-name">Kajo Keji Stars U17</span>
+                                </div>
+                                
+                                <div class="match-score">
+                                    <span class="score">4 - 1</span>
+                                </div>
+                                
+                                <div class="team away-team">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji City U17" class="team-logo">
+                                    <span class="team-name">Kajo Keji City U17</span>
+                                </div>
+                            </div>
+                            
+                            <div class="match-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> KKLFA Training Center</span>
+                                <span><i class="fas fa-trophy"></i> U17 League - Round 5</span>
+                            </div>
+                            
+                            <div class="match-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Match Report</a>
+                                <a href="#" class="btn btn-sm btn-outline">Highlights</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- League Tables Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>League Tables</h2>
+                <p>Current standings for KKLFA competitions</p>
+            </div>
+            
+            <div class="tables-container animate-on-scroll">
+                <div class="table-tabs">
+                    <button class="table-tab active" data-table="premier">Premier League</button>
+                    <button class="table-tab" data-table="women">Women's League</button>
+                    <button class="table-tab" data-table="u17">U17 League</button>
+                    <button class="table-tab" data-table="u14">U14 League</button>
+                </div>
+                
+                <!-- Premier League Table -->
+                <div id="premier-table" class="league-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Team</th>
+                                <th>P</th>
+                                <th>W</th>
+                                <th>D</th>
+                                <th>L</th>
+                                <th>GF</th>
+                                <th>GA</th>
+                                <th>GD</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlighted">
+                                <td>1</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/fan9.jpeg" alt="Kajo Keji Stars" class="table-team-logo">
+                                    <span>Kajo Keji Stars</span>
+                                </td>
+                                <td>9</td>
+                                <td>7</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>22</td>
+                                <td>7</td>
+                                <td>+15</td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji United" class="table-team-logo">
+                                    <span>Kajo Keji United</span>
+                                </td>
+                                <td>9</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>18</td>
+                                <td>8</td>
+                                <td>+10</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/player8.jpeg" alt="Kajo Keji City" class="table-team-logo">
+                                    <span>Kajo Keji City</span>
+                                </td>
+                                <td>9</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>15</td>
+                                <td>10</td>
+                                <td>+5</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji Rovers" class="table-team-logo">
+                                    <span>Kajo Keji Rovers</span>
+                                </td>
+                                <td>9</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>14</td>
+                                <td>11</td>
+                                <td>+3</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/fan5.jpeg" alt="Kajo Keji Athletic" class="table-team-logo">
+                                    <span>Kajo Keji Athletic</span>
+                                </td>
+                                <td>9</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>-1</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/img.jpeg" alt="Kajo Keji FC" class="table-team-logo">
+                                    <span>Kajo Keji FC</span>
+                                </td>
+                                <td>9</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>10</td>
+                                <td>12</td>
+                                <td>-2</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji Town" class="table-team-logo">
+                                    <span>Kajo Keji Town</span>
+                                </td>
+                                <td>9</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>9</td>
+                                <td>14</td>
+                                <td>-5</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/img.jpeg" alt="Kajo Keji Wanderers" class="table-team-logo">
+                                    <span>Kajo Keji Wanderers</span>
+                                </td>
+                                <td>9</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>18</td>
+                                <td>-11</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Women's League Table -->
+                <div id="women-table" class="league-table" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Team</th>
+                                <th>P</th>
+                                <th>W</th>
+                                <th>D</th>
+                                <th>L</th>
+                                <th>GF</th>
+                                <th>GA</th>
+                                <th>GD</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlighted">
+                                <td>1</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji Queens" class="table-team-logo">
+                                    <span>Kajo Keji Queens</span>
+                                </td>
+                                <td>7</td>
+                                <td>6</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>18</td>
+                                <td>4</td>
+                                <td>+14</td>
+                                <td>19</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/img.jpeg" alt="Kajo Keji Ladies" class="table-team-logo">
+                                    <span>Kajo Keji Ladies</span>
+                                </td>
+                                <td>7</td>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>15</td>
+                                <td>8</td>
+                                <td>+7</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji City Women" class="table-team-logo">
+                                    <span>Kajo Keji City Women</span>
+                                </td>
+                                <td>7</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>12</td>
+                                <td>10</td>
+                                <td>+2</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/img.jpeg" alt="Kajo Keji United Women" class="table-team-logo">
+                                    <span>Kajo Keji United Women</span>
+                                </td>
+                                <td>7</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>16</td>
+                                <td>-10</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- U17 League Table -->
+                <div id="u17-table" class="league-table" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Team</th>
+                                <th>P</th>
+                                <th>W</th>
+                                <th>D</th>
+                                <th>L</th>
+                                <th>GF</th>
+                                <th>GA</th>
+                                <th>GD</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlighted">
+                                <td>1</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji Stars U17" class="table-team-logo">
+                                    <span>Kajo Keji Stars U17</span>
+                                </td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>14</td>
+                                <td>3</td>
+                                <td>+11</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/fan5.jpeg" alt="Kajo Keji United U17" class="table-team-logo">
+                                    <span>Kajo Keji United U17</span>
+                                </td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>+5</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji City U17" class="table-team-logo">
+                                    <span>Kajo Keji City U17</span>
+                                </td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>7</td>
+                                <td>11</td>
+                                <td>-4</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/fan6.jpeg" alt="Kajo Keji Rovers U17" class="table-team-logo">
+                                    <span>Kajo Keji Rovers U17</span>
+                                </td>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>15</td>
+                                <td>-12</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- U14 League Table -->
+                <div id="u14-table" class="league-table" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Team</th>
+                                <th>P</th>
+                                <th>W</th>
+                                <th>D</th>
+                                <th>L</th>
+                                <th>GF</th>
+                                <th>GA</th>
+                                <th>GD</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji City U14" class="table-team-logo">
+                                    <span>Kajo Keji City U14</span>
+                                </td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>12</td>
+                                <td>4</td>
+                                <td>+8</td>
+                                <td>10</td>
+                            </tr>
+                            <tr class="highlighted">
+                                <td>2</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/fan10.jpeg" alt="Kajo Keji Stars U14" class="table-team-logo">
+                                    <span>Kajo Keji Stars U14</span>
+                                </td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>+5</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/player4.jpeg" alt="Kajo Keji United U14" class="table-team-logo">
+                                    <span>Kajo Keji United U14</span>
+                                </td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>6</td>
+                                <td>8</td>
+                                <td>-2</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="team-cell">
+                                    <img src="images/gallery/kklfa.jpeg" alt="Kajo Keji Rovers U14" class="table-team-logo">
+                                    <span>Kajo Keji Rovers U14</span>
+                                </td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>14</td>
+                                <td>-11</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Scorers Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Top Scorers</h2>
+                <p>Leading goal scorers in KKLFA competitions</p>
+            </div>
+            
+            <div class="scorers-container animate-on-scroll">
+                <div class="scorer-tabs">
+                    <button class="scorer-tab active" data-scorer="premier">Premier League</button>
+                    <button class="scorer-tab" data-scorer="women">Women's League</button>
+                    <button class="scorer-tab" data-scorer="youth">Youth Competitions</button>
+                </div>
+                
+                <!-- Premier League Scorers -->
+                <div id="premier-scorers" class="scorers-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Player</th>
+                                <th>Team</th>
+                                <th>Goals</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlighted">
+                                <td>1</td>
+                                <td class="player-cell">
+                                    <img src="images/gallery/img.jpeg" alt="Taylor Ladu" class="player-avatar">
+                                    <span>Taylor Julius</span>
+                                </td>
+                                <td>Kajo Keji Stars</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="player-cell">
+                                    <img src="images/gallery/player3.jpeg" alt="James Kenyi" class="player-avatar">
+                                    <span>James Kenyi</span>
+                                </td>
+                                <td>Kajo Keji United</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="player-cell">
+                                    <img src="images/gallery/player7.jpeg" alt="Julius Wani" class="player-avatar">
+                                    <span>Julius Wani</span>
+                                </td>
+                                <td>Kajo Keji City</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="player-cell">
+                                    <img src="images/gallery/player8.jpeg" alt="Emmanuel Kenyi" class="player-avatar">
+                                    <span>Emmanuel Kenyi</span>
+                                </td>
+                                <td>Kajo Keji Stars</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td class="player-cell">
+                                    <img src="images/gallery/player8.jpeg" alt="Peter Ladu" class="player-avatar">
+                                    <span>Peter Ladu</span>
+                                </td>
+                                <td>Kajo Keji Rovers</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Women's League Scorers -->
+                <div id="women-scorers" class="scorers-table" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Player</th>
+                                <th>Team</th>
+                                <th>Goals</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlighted">
+                                <td>1</td>
+                                <td class="player-cell">
+                                    <img src="images/gallery/player7.jpeg" alt="Sarah Kenyi" class="player-avatar">
+                                    <span>Sarah Kenyi</span>
+                                </td>
+                                <td>Kajo Keji Queens</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="player-cell">
+                                    <img src="images/gallery/player1.jpeg" alt="Grace Lemi" class="player-avatar">
+                                    <span>Grace Lemi</span>
+                                </td>
+                                <td>Kajo Keji Ladies</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="player-cell">
+                                    <img src="images/gallery/fan4.jpeg" alt="Patricia Ladu" class="player-avatar">
+                                    <span>Patricia Ladu</span>
+                                </td>
+                                <td>Kajo Keji City Women</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Youth Competitions Scorers -->
+                <div id="youth-scorers" class="scorers-table" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Player</th>
+                                <th>Team</th>
+                                <th>Goals</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlighted">
+                                <td>1</td>
+                                <td class="player-cell">
+                                    <img src="images/gallery/fan9.jpeg" alt="Samuel Kenyi" class="player-avatar">
+                                    <span>Samuel Kenyi</span>
+                                </td>
+                                <td>Kajo Keji Stars U17</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="player-cell">
+                                    <img src="images/gallery/fan5.jpeg" alt="Paul Kenyi" class="player-avatar">
+                                    <span>Paul Kenyi</span>
+                                </td>
+                                <td>Kajo Keji Stars U14</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="player-cell">
+                                    <img src="images/gallery/fan7.jpeg" alt="David Lemi" class="player-avatar">
+                                    <span>David Wani</span>
+                                </td>
+                                <td>Kajo Keji United U17</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Match Tickets Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Match Tickets</h2>
+                <p>Get your tickets for upcoming KKLFA matches</p>
+            </div>
+            
+            <div class="grid grid-2 animate-on-scroll">
+                <div>
+                    <h3>Ticket Information</h3>
+                    <p>Support your favorite team by attending matches at Kajo Keji Stadium and other venues across the county. Tickets for all KKLFA matches can be purchased online or at the stadium on match days.</p>
+                    
+                    <h4 class="mt-4">Ticket Prices:</h4>
+                    <ul style="padding-left: 1.5rem;">
+                        <li>Premier League Matches: 500 SSP (Regular), 1,000 SSP (VIP)</li>
+                        <li>Kajo Keji Cup Matches: 700 SSP (Regular), 1,500 SSP (VIP)</li>
+                        <li>Women's League Matches: 300 SSP (Regular), 700 SSP (VIP)</li>
+                        <li>Youth Competitions: 200 SSP (Regular)</li>
+                    </ul>
+                    
+                    <h4 class="mt-4">Season Tickets:</h4>
+                    <p>Season tickets for the 2025 season are available, giving you access to all home matches for your chosen team. Contact the KKLFA office for more information.</p>
+                    
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-primary">Buy Tickets Online</a>
+                        <a href="contact.html" class="btn btn-outline">Contact for Group Bookings</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="featured-match">
+                        <div class="featured-match-header">
+                            <h3>Featured Match</h3>
+                            <span class="match-date">June 15, 2025 - 3:00 PM</span>
+                        </div>
+                        
+                        <div class="featured-match-teams">
+                            <div class="team">
+                                <img src="images/gallery/player2.jpeg" alt="Kajo Keji Stars" class="team-logo-large">
+                                <h4>Kajo Keji Stars</h4>
+                            </div>
+                            
+                            <div class="vs-container">
+                                <span class="vs-large">VS</span>
+                                <span class="match-type">Premier League - Round 10</span>
+                            </div>
+                            
+                            <div class="team">
+                                <img src="images/gallery/player7.jpeg" alt="Kajo Keji United" class="team-logo-large">
+                                <h4>Kajo Keji United</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="match-venue">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kajo Keji Stadium</span>
+                        </div>
+                        
+                        <div class="ticket-options">
+                            <div class="ticket-option">
+                                <div class="ticket-type">
+                                    <h5>Regular Ticket</h5>
+                                    <span class="ticket-price">500 SSP</span>
+                                </div>
+                                <p>General admission with access to regular seating areas</p>
+                                <a href="#" class="btn btn-sm btn-primary">Buy Now</a>
+                            </div>
+                            
+                            <div class="ticket-option">
+                                <div class="ticket-type">
+                                    <h5>VIP Ticket</h5>
+                                    <span class="ticket-price">1,000 SSP</span>
+                                </div>
+                                <p>Premium seating with access to VIP lounge and refreshments</p>
+                                <a href="#" class="btn btn-sm btn-secondary">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo">
+                            <img src="images/gallery/kklfa.jpeg" alt="KKLFA Logo" style="height: 40px;">
+                        </a>
+                    </div>
+                    <p>Promoting football excellence and community development in Kajo Keji County, South Sudan.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1F9a8gZ4jE"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@kajokejifa?si=ndn2SZHPyPT-CbME"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="match-schedule.html">Match Schedule</a></li>
+                        <li><a href="players.html">Players</a></li>
+                        <li><a href="join.html">Join the Team</a></li>
+                        <li><a href="donate.html">Support Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> kklfa2023@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +211 928 907 865</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kajo Keji County, Central Equatoria State, South Sudan</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kajo Keji Local Football Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Competition filter functionality
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const competitionGroups = document.querySelectorAll('.competition-group');
+            const searchInput = document.getElementById('match-search');
+            
+            // Set up filter tabs
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    // Get competition value
+                    const competition = tab.getAttribute('data-competition');
+                    
+                    // Filter competition groups
+                    competitionGroups.forEach(group => {
+                        if (competition === 'all' || group.getAttribute('data-competition') === competition) {
+                            group.style.display = 'block';
+                        } else {
+                            group.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Date filter functionality
+            const dateFilterBtns = document.querySelectorAll('.date-filter-btn');
+            const upcomingMatches = document.getElementById('upcoming-matches');
+            const pastResults = document.getElementById('past-results');
+            
+            dateFilterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    dateFilterBtns.forEach(b => b.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    // Get filter value
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    // Show/hide sections based on filter
+                    if (filter === 'upcoming') {
+                        upcomingMatches.style.display = 'block';
+                        pastResults.style.display = 'none';
+                    } else if (filter === 'past') {
+                        upcomingMatches.style.display = 'none';
+                        pastResults.style.display = 'block';
+                    } else {
+                        upcomingMatches.style.display = 'block';
+                        pastResults.style.display = 'block';
+                    }
+                });
+            });
+            
+            // Search functionality
+            searchInput.addEventListener('input', () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                
+                // Get all match cards
+                const matchCards = document.querySelectorAll('.match-card');
+                
+                matchCards.forEach(card => {
+                    const homeTeam = card.querySelector('.home-team .team-name').textContent.toLowerCase();
+                    const awayTeam = card.querySelector('.away-team .team-name').textContent.toLowerCase();
+                    const matchInfo = card.querySelector('.match-meta').textContent.toLowerCase();
+                    
+                    if (homeTeam.includes(searchTerm) || awayTeam.includes(searchTerm) || matchInfo.includes(searchTerm)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+            
+            // League table tabs functionality
+            const tableTabs = document.querySelectorAll('.table-tab');
+            const leagueTables = document.querySelectorAll('.league-table');
+            
+            tableTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    tableTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    // Get table value
+                    const table = tab.getAttribute('data-table');
+                    
+                    // Show selected table, hide others
+                    leagueTables.forEach(leagueTable => {
+                        if (leagueTable.id === `${table}-table`) {
+                            leagueTable.style.display = 'block';
+                        } else {
+                            leagueTable.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Top scorers tabs functionality
+            const scorerTabs = document.querySelectorAll('.scorer-tab');
+            const scorersTables = document.querySelectorAll('.scorers-table');
+            
+            scorerTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    scorerTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    // Get scorer value
+                    const scorer = tab.getAttribute('data-scorer');
+                    
+                    // Show selected table, hide others
+                    scorersTables.forEach(scorersTable => {
+                        if (scorersTable.id === `${scorer}-scorers`) {
+                            scorersTable.style.display = 'block';
+                        } else {
+                            scorersTable.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Style match cards
+            const matchCards = document.querySelectorAll('.match-card');
+            matchCards.forEach(card => {
+                card.style.display = 'flex';
+                card.style.marginBottom = '1.5rem';
+                card.style.backgroundColor = 'white';
+                card.style.borderRadius = '8px';
+                card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                card.style.overflow = 'hidden';
+            });
+            
+            // Style team logos
+            const teamLogos = document.querySelectorAll('.team-logo');
+            teamLogos.forEach(logo => {
+                logo.style.width = '30px';
+                logo.style.height = '30px';
+                logo.style.marginRight = '0.5rem';
+            });
+            
+            // Style large team logos
+            const largeLogos = document.querySelectorAll('.team-logo-large');
+            largeLogos.forEach(logo => {
+                logo.style.width = '80px';
+                logo.style.height = '80px';
+                logo.style.marginBottom = '0.5rem';
+            });
+            
+            // Style table team logos
+            const tableTeamLogos = document.querySelectorAll('.table-team-logo');
+            tableTeamLogos.forEach(logo => {
+                logo.style.width = '24px';
+                logo.style.height = '24px';
+                logo.style.marginRight = '0.5rem';
+            });
+            
+            // Style player avatars
+            const playerAvatars = document.querySelectorAll('.player-avatar');
+            playerAvatars.forEach(avatar => {
+                avatar.style.width = '30px';
+                avatar.style.height = '30px';
+                avatar.style.borderRadius = '50%';
+                avatar.style.marginRight = '0.5rem';
+                avatar.style.objectFit = 'cover';
+            });
+            
+            // Style featured match
+            const featuredMatch = document.querySelector('.featured-match');
+            if (featuredMatch) {
+                featuredMatch.style.backgroundColor = 'white';
+                featuredMatch.style.borderRadius = '8px';
+                featuredMatch.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                featuredMatch.style.overflow = 'hidden';
+            }
+            
+            // Style ticket options
+            const ticketOptions = document.querySelectorAll('.ticket-option');
+            ticketOptions.forEach(option => {
+                option.style.backgroundColor = '#f8f9fa';
+                option.style.borderRadius = '8px';
+                option.style.padding = '1rem';
+                option.style.marginBottom = '1rem';
+            });
+            
+            // Style tables
+            const tables = document.querySelectorAll('table');
+            tables.forEach(table => {
+                table.style.width = '100%';
+                table.style.borderCollapse = 'collapse';
+                table.style.marginBottom = '1rem';
+            });
+            
+            const tableHeaders = document.querySelectorAll('th');
+            tableHeaders.forEach(header => {
+                header.style.backgroundColor = 'var(--primary-color)';
+                header.style.color = 'white';
+                header.style.padding = '0.75rem';
+                header.style.textAlign = 'left';
+            });
+            
+            const tableRows = document.querySelectorAll('tbody tr');
+            tableRows.forEach((row, index) => {
+                if (index % 2 === 0) {
+                    row.style.backgroundColor = '#f8f9fa';
+                }
+                row.style.borderBottom = '1px solid #dee2e6';
+            });
+            
+            const tableCells = document.querySelectorAll('td');
+            tableCells.forEach(cell => {
+                cell.style.padding = '0.75rem';
+            });
+            
+            // Style highlighted rows
+            const highlightedRows = document.querySelectorAll('.highlighted');
+            highlightedRows.forEach(row => {
+                row.style.backgroundColor = 'rgba(229, 114, 0, 0.1)';
+                row.style.fontWeight = 'bold';
+            });
+            
+            // Style team cells
+            const teamCells = document.querySelectorAll('.team-cell');
+            teamCells.forEach(cell => {
+                cell.style.display = 'flex';
+                cell.style.alignItems = 'center';
+            });
+            
+            // Style player cells
+            const playerCells = document.querySelectorAll('.player-cell');
+            playerCells.forEach(cell => {
+                cell.style.display = 'flex';
+                cell.style.alignItems = 'center';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Kajo Keji Local Football Association</title>
+    <meta name="description" content="Explore photos and videos from Kajo Keji Local Football Association matches, training sessions, and community events">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Gallery specific styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+        }
+        
+        @media (min-width: 640px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item-info {
+            padding: 1rem;
+            background-color: white;
+        }
+        
+        .gallery-item-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .gallery-item-date {
+            font-size: 0.875rem;
+            color: var(--light-text);
+        }
+        
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+        
+        .lightbox-caption {
+            color: white;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .lightbox-close, .lightbox-prev, .lightbox-next {
+            position: absolute;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover {
+            color: var(--secondary-color);
+        }
+        
+        .lightbox-close {
+            top: -2rem;
+            right: 0;
+        }
+        
+        .lightbox-prev {
+            left: -3rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .lightbox-next {
+            right: -3rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        /* Filter bar styles */
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .filter-button {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-button.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .filter-button:not(.active) {
+            background-color: white;
+            color: var(--text-color);
+        }
+        
+        .filter-button:not(.active):hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        /* Search bar styles */
+        .search-bar {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 3rem;
+            border-radius: 0.375rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--light-text);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/gallery/kklfa.jpeg" alt="KKLFA Logo" style="height: 40px;">
+                </a>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="objectives.html">Objectives</a>
+                    <a href="committees.html">Committees</a>
+                    <a href="events.html">Events</a>
+                    <a href="players.html">Players</a>
+                    <a href="match-schedule.html">Match Schedule</a>
+                    
+                    <div class="dropdown">
+                        <a href="#">More</a>
+                        <div class="dropdown-content">
+                            <a href="gallery.html">Gallery</a>
+                            <a href="fan-zone.html">Fan Zone</a>
+                            <a href="news.html">News</a>
+                            <a href="achievements.html">Achievements</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                    
+                    <a href="join.html" class="btn btn-primary">Join Us</a>
+                    <a href="donate.html" class="btn btn-secondary">Donate</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="background-color: var(--primary-color);">
+        <div class="container">
+            <div class="hero-content animate-on-scroll">
+                <h1>Gallery</h1>
+                <p>Explore photos and videos from our matches, training sessions, and community events</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Search and Filter Bar -->
+            <div class="search-bar animate-on-scroll">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="gallery-search" placeholder="Search gallery...">
+            </div>
+            
+            <div class="filter-bar animate-on-scroll">
+                <button class="filter-button active" data-category="all">All</button>
+                <button class="filter-button" data-category="matches">Matches</button>
+                <button class="filter-button" data-category="training">Training</button>
+                <button class="filter-button" data-category="community">Community Events</button>
+                <button class="filter-button" data-category="youth">Youth Programs</button>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="gallery-grid animate-on-scroll">
+                <div class="gallery-item" data-category="matches">
+                    <img src="images/gallery/player1.jpeg" alt="Match Photo 1">
+                    <div class="caption">Match vs Juba Stars - May 2025</div>
+                </div>
+
+                <div class="gallery-item" data-category="training">
+                    <img src="images/gallery/player2.jpeg" alt="Training Photo 1">
+                    <div class="caption">Training Session - April 2025</div>
+                </div>
+
+                <div class="gallery-item" data-category="community">
+                    <img src="images/gallery/player3.jpeg" alt="Community Event">
+                    <div class="caption">Community Outreach - March 2025</div>
+                </div>
+
+                <!-- Gallery items will be dynamically populated by JavaScript -->
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button id="load-more" class="btn btn-primary">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Video Gallery</h2>
+            <p>Watch highlights from our matches and events</p>
+        </div>
+
+        <div class="grid grid-3 animate-on-scroll">
+
+            <!-- Video 1 -->
+            <div class="card">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.5rem 0.5rem 0 0;">
+                    <a href="https://youtu.be/6AfwaKPyHtQ?si=xdqg_GASGQpeW1kp" target="_blank" 
+                       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                        <div style="text-align: center; color: white;">
+                            <div style="width: 60px; height: 60px; background-color: rgba(229, 114, 0, 0.8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                <i class="fas fa-play" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <p>Watch Half time Analysis <br>with Mc Samix and Wani Evans</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Match Highlights: KKLFA vs Juba Stars</h3>
+                    <p class="card-text">May 15, 2025</p>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="card">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.5rem 0.5rem 0 0;">
+                    <a href="https://youtu.be/d9HtMGpZrvo?si=Gana9XHbB8L42sU2" target="_blank" 
+                       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                        <div style="text-align: center; color: white;">
+                            <div style="width: 60px; height: 60px; background-color: rgba(229, 114, 0, 0.8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                <i class="fas fa-play" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <p>Watch Hon. Phenul Dumo</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Youth Training Program</h3>
+                    <p class="card-text">April 28, 2025</p>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="card">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.5rem 0.5rem 0 0;">
+                    <a href="https://youtu.be/TLjhooMDR54?si=8TsR3tP25BlUTzmG" target="_blank" 
+                       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                        <div style="text-align: center; color: white;">
+                            <div style="width: 60px; height: 60px; background-color: rgba(229, 114, 0, 0.8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                <i class="fas fa-play" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <p>Watch County Coach <br>Press Conference</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Community Outreach Event</h3>
+                    <p class="card-text">April 15, 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="https://youtube.com/@kajokejifa?si=ndn2SZHPyPT-CbME" class="btn btn-secondary">View All Videos</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image">
+            <div class="lightbox-caption"></div>
+            <div class="lightbox-close"><i class="fas fa-times"></i></div>
+            <div class="lightbox-prev"><i class="fas fa-chevron-left"></i></div>
+            <div class="lightbox-next"><i class="fas fa-chevron-right"></i></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo">
+                            <img src="images/gallery/kklfa.jpeg" alt="KKLFA Logo" style="height: 40px;">
+                        </a>
+                    </div>
+                    <p>Promoting football excellence and community development in Kajo Keji County, South Sudan.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1F9a8gZ4jE"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@kajokejifa?si=ndn2SZHPyPT-CbME"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="match-schedule.html">Match Schedule</a></li>
+                        <li><a href="players.html">Players</a></li>
+                        <li><a href="join.html">Join the Team</a></li>
+                        <li><a href="donate.html">Support Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> kklfa2023@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +211 928 907 865</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kajo Keji County, Central Equatoria State, South Sudan</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kajo Keji Local Football Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery data
+            const galleryItems = [
+                {
+                    id: 1,
+                    title: 'Regional Tournament Final',
+                    category: 'matches',
+                    image: 'images/gallery/official1.jpeg',
+                    date: 'May 15, 2025'
+                },
+                {
+                    id: 2,
+                    title: 'Youth Training Session',
+                    category: 'training',
+                    image: 'images/gallery/img.jpeg',
+                    date: 'April 28, 2025'
+                },
+                {
+                    id: 3,
+                    title: 'Community Outreach Program',
+                    category: 'community',
+                    image: 'images/gallery/official2.jpeg',
+                    date: 'April 15, 2025'
+                },
+                {
+                    id: 4,
+                    title: 'Women\'s Team Practice',
+                    category: 'training',
+                    image: 'images/gallery/player1.jpeg',
+                    date: 'April 10, 2025'
+                },
+                {
+                    id: 5,
+                    title: 'Match vs. Juba Stars',
+                    category: 'matches',
+                    image: 'images/gallery/player8.jpeg',
+                    date: 'March 28, 2025'
+                },
+                {
+                    id: 6,
+                    title: 'Youth Tournament',
+                    category: 'youth',
+                    image: 'images/gallery/fan5.jpeg',
+                    date: 'March 15, 2025'
+                },
+                {
+                    id: 7,
+                    title: 'Coach Training Workshop',
+                    category: 'training',
+                    image: 'images/gallery/player4.jpeg',
+                    date: 'March 10, 2025'
+                },
+                {
+                    id: 8,
+                    title: 'Anti-Drug Campaign Event',
+                    category: 'community',
+                    image: 'images/gallery/fan11.jpeg',
+                    date: 'February 25, 2025'
+                }
+            ];
+            
+            // Additional items that will be loaded when clicking "Load More"
+            const additionalItems = [
+                {
+                    id: 9,
+                    title: 'School Outreach Program',
+                    category: 'youth',
+                    image: 'images/gallery/img-1.jpeg',
+                    date: 'February 18, 2025'
+                },
+                {
+                    id: 10,
+                    title: 'Regional Cup Semi-Final',
+                    category: 'matches',
+                    image: 'images/gallery/fan12.jpeg',
+                    date: 'February 10, 2025'
+                },
+                {
+                    id: 11,
+                    title: 'Team Building Exercise',
+                    category: 'training',
+                    image: 'images/gallery/fan6.jpeg',
+                    date: 'January 28, 2025'
+                },
+                {
+                    id: 12,
+                    title: 'Community Football Day',
+                    category: 'community',
+                    image: 'images/gallery/fan3.jpeg',
+                    date: 'January 15, 2025'
+                }
+            ];
+            
+            const galleryGrid = document.querySelector('.gallery-grid');
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const searchInput = document.getElementById('gallery-search');
+            const loadMoreButton = document.getElementById('load-more');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = lightbox.querySelector('.lightbox-image');
+            const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+            const lightboxClose = lightbox.querySelector('.lightbox-close');
+            const lightboxPrev = lightbox.querySelector('.lightbox-prev');
+            const lightboxNext = lightbox.querySelector('.lightbox-next');
+            
+            let currentCategory = 'all';
+            let currentItems = [...galleryItems];
+            let moreItemsLoaded = false;
+            let currentIndex = 0;
+            
+            // Initialize gallery
+            renderGallery();
+            
+            // Filter functionality
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Update current category
+                    currentCategory = button.getAttribute('data-category');
+                    
+                    // Filter and render gallery
+                    filterGallery();
+                });
+            });
+            
+            // Search functionality
+            searchInput.addEventListener('input', filterGallery);
+            
+            // Load more functionality
+            loadMoreButton.addEventListener('click', () => {
+                if (!moreItemsLoaded) {
+                    currentItems = [...currentItems, ...additionalItems];
+                    moreItemsLoaded = true;
+                    loadMoreButton.style.display = 'none';
+                    filterGallery();
+                }
+            });
+            
+            // Lightbox functionality
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxPrev.addEventListener('click', () => navigateLightbox(-1));
+            lightboxNext.addEventListener('click', () => navigateLightbox(1));
+            
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (lightbox.style.display === 'flex') {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    } else if (e.key === 'ArrowRight') {
+                        navigateLightbox(1);
+                    } else if (e.key === 'ArrowLeft') {
+                        navigateLightbox(-1);
+                    }
+                }
+            });
+            
+            // Functions
+            function renderGallery() {
+                galleryGrid.innerHTML = '';
+                
+                const filteredItems = getFilteredItems();
+                
+                if (filteredItems.length === 0) {
+                    galleryGrid.innerHTML = '<p class="text-center" style="grid-column: 1 / -1;">No items found matching your criteria.</p>';
+                    return;
+                }
+                
+                filteredItems.forEach((item, index) => {
+                    const galleryItem = document.createElement('div');
+                    galleryItem.className = 'gallery-item';
+                    galleryItem.setAttribute('data-category', item.category);
+                    galleryItem.setAttribute('data-caption', item.title);
+                    galleryItem.setAttribute('data-index', index);
+                    
+                    galleryItem.innerHTML = `
+                        <img src="${item.image}" alt="${item.title}">
+                        <div class="gallery-item-info">
+                            <h3 class="gallery-item-title">${item.title}</h3>
+                            <p class="gallery-item-date">${item.date}</p>
+                        </div>
+                    `;
+                    
+                    galleryItem.addEventListener('click', () => openLightbox(index, filteredItems));
+                    
+                    galleryGrid.appendChild(galleryItem);
+                });
+            }
+            
+            function filterGallery() {
+                renderGallery();
+            }
+            
+            function getFilteredItems() {
+                const searchTerm = searchInput.value.toLowerCase();
+                
+                return currentItems.filter(item => {
+                    // Category filter
+                    const categoryMatch = currentCategory === 'all' || item.category === currentCategory;
+                    
+                    // Search filter
+                    const searchMatch = item.title.toLowerCase().includes(searchTerm) || 
+                                        item.category.toLowerCase().includes(searchTerm) ||
+                                        item.date.toLowerCase().includes(searchTerm);
+                    
+                    return categoryMatch && searchMatch;
+                });
+            }
+            
+            function openLightbox(index, items) {
+                currentIndex = index;
+                const item = items[index];
+                
+                lightboxImage.src = item.image;
+                lightboxImage.alt = item.title;
+                lightboxCaption.textContent = `${item.title} - ${item.date}`;
+                
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeLightbox() {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+            
+            function navigateLightbox(direction) {
+                const filteredItems = getFilteredItems();
+                currentIndex = (currentIndex + direction + filteredItems.length) % filteredItems.length;
+                
+                const item = filteredItems[currentIndex];
+                lightboxImage.src = item.image;
+                lightboxImage.alt = item.title;
+                lightboxCaption.textContent = `${item.title} - ${item.date}`;
+            }
+        });
+    </script>
+</body>
+</html>

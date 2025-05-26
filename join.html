@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Team - Kajo Keji Local Football Association</title>
+    <meta name="description" content="Join the Kajo Keji Local Football Association as a player, coach, referee, or volunteer. Be part of our mission to develop football in Kajo Keji County.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/gallery/kklfa.jpeg" alt="KKLFA Logo" style="height: 40px;">
+                </a>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="objectives.html">Objectives</a>
+                    <a href="committees.html">Committees</a>
+                    <a href="events.html">Events</a>
+                    <a href="players.html">Players</a>
+                    <a href="match-schedule.html">Match Schedule</a>
+                    
+                    <div class="dropdown">
+                        <a href="#">More</a>
+                        <div class="dropdown-content">
+                            <a href="gallery.html">Gallery</a>
+                            <a href="fan-zone.html">Fan Zone</a>
+                            <a href="news.html">News</a>
+                            <a href="achievements.html">Achievements</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                    
+                    <a href="join.html" class="btn btn-primary">Join Us</a>
+                    <a href="donate.html" class="btn btn-secondary">Donate</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="background-color: var(--primary-color);">
+        <div class="container">
+            <div class="hero-content animate-on-scroll">
+                <h1>Join the Team</h1>
+                <p>Be part of our mission to develop football and transform communities in Kajo Keji County</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Options Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>How You Can Join</h2>
+                <p>There are many ways to be part of the KKLFA family</p>
+            </div>
+            
+            <div class="tabs-container animate-on-scroll">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="players">Players</button>
+                    <button class="tab-button" data-tab="coaches">Coaches</button>
+                    <button class="tab-button" data-tab="referees">Referees</button>
+                    <button class="tab-button" data-tab="volunteers">Volunteers</button>
+                    <button class="tab-button" data-tab="partners">Partners</button>
+                </div>
+                
+                <div class="tab-contents">
+                    <div class="tab-content active" id="players-tab">
+                        <div class="grid grid-2">
+                            <div>
+                                <h3>Join as a Player</h3>
+                                <p>We welcome players of all ages and skill levels to join our various teams and development programs. Whether you're a seasoned player or just starting out, there's a place for you at KKLFA.</p>
+                                
+                                <h4 class="mt-4">Requirements:</h4>
+                                <ul>
+                                    <li>Commitment to regular training and matches</li>
+                                    <li>Positive attitude and team spirit</li>
+                                    <li>Willingness to learn and improve</li>
+                                    <li>Respect for coaches, officials, and fellow players</li>
+                                </ul>
+                                
+                                <h4 class="mt-4">Available Programs:</h4>
+                                <ul>
+                                    <li>Youth Development Program (ages 8-16)</li>
+                                    <li>Senior Men's Team (ages 17+)</li>
+                                    <li>Women's Team (ages 16+)</li>
+                                    <li>Veterans Team (ages 35+)</li>
+                                </ul>
+                                
+                                <a href="#application-form" class="btn btn-primary mt-4">Apply Now</a>
+                            </div>
+                            <div>
+                                <img src="images/gallery/player2.jpeg" alt="Football Players" style="width: 100%; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="coaches-tab">
+                        <div class="grid grid-2">
+                            <div>
+                                <h3>Join as a Coach</h3>
+                                <p>We're always looking for passionate and dedicated coaches to help develop our players and teams. Whether you're an experienced coach or looking to start your coaching journey, we have opportunities for you.</p>
+                                
+                                <h4 class="mt-4">Requirements:</h4>
+                                <ul>
+                                    <li>Knowledge of football fundamentals</li>
+                                    <li>Ability to communicate effectively with players</li>
+                                    <li>Commitment to player development both on and off the field</li>
+                                    <li>Willingness to participate in coaching education programs</li>
+                                </ul>
+                                
+                                <h4 class="mt-4">Available Positions:</h4>
+                                <ul>
+                                    <li>Head Coaches</li>
+                                    <li>Assistant Coaches</li>
+                                    <li>Goalkeeper Coaches</li>
+                                    <li>Youth Development Coaches</li>
+                                </ul>
+                                
+                                <a href="#application-form" class="btn btn-primary mt-4">Apply Now</a>
+                            </div>
+                            <div>
+                                <img src="images/gallery/player1.jpeg" alt="Football Coach" style="width: 100%; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="referees-tab">
+                        <div class="grid grid-2">
+                            <div>
+                                <h3>Join as a Referee</h3>
+                                <p>Referees play a crucial role in the game, ensuring fair play and maintaining the integrity of the sport. We provide training and development opportunities for referees at all levels.</p>
+                                
+                                <h4 class="mt-4">Requirements:</h4>
+                                <ul>
+                                    <li>Good knowledge of the Laws of the Game</li>
+                                    <li>Physical fitness</li>
+                                    <li>Strong decision-making skills</li>
+                                    <li>Ability to remain calm under pressure</li>
+                                </ul>
+                                
+                                <h4 class="mt-4">Benefits:</h4>
+                                <ul>
+                                    <li>Referee training and certification</li>
+                                    <li>Regular officiating opportunities</li>
+                                    <li>Mentoring from experienced referees</li>
+                                    <li>Pathway to higher levels of officiating</li>
+                                </ul>
+                                
+                                <a href="#application-form" class="btn btn-primary mt-4">Apply Now</a>
+                            </div>
+                            <div>
+                                <img src="images/gallery/player4.jpeg" alt="Football Referee" style="width: 100%; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="volunteers-tab">
+                        <div class="grid grid-2">
+                            <div>
+                                <h3>Join as a Volunteer</h3>
+                                <p>Volunteers are the backbone of our organization. There are many ways to contribute your time and skills to help us achieve our mission of developing football and transforming communities.</p>
+                                
+                                <h4 class="mt-4">Volunteer Opportunities:</h4>
+                                <ul>
+                                    <li>Event Support (match days, tournaments, community events)</li>
+                                    <li>Administrative Support</li>
+                                    <li>Marketing and Communications</li>
+                                    <li>Facility Maintenance</li>
+                                    <li>Community Outreach Programs</li>
+                                </ul>
+                                
+                                <h4 class="mt-4">Benefits:</h4>
+                                <ul>
+                                    <li>Be part of a passionate community</li>
+                                    <li>Develop new skills and gain experience</li>
+                                    <li>Make a positive impact in Kajo Keji County</li>
+                                    <li>Recognition and appreciation for your contributions</li>
+                                </ul>
+                                
+                                <a href="#application-form" class="btn btn-primary mt-4">Apply Now</a>
+                            </div>
+                            <div>
+                                <img src="images/gallery/fan2.jpeg" alt="Volunteers" style="width: 100%; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="partners-tab">
+                        <div class="grid grid-2">
+                            <div>
+                                <h3>Join as a Partner</h3>
+                                <p>We welcome partnerships with organizations that share our vision for football development and community transformation. Together, we can make a greater impact in Kajo Keji County.</p>
+                                
+                                <h4 class="mt-4">Partnership Opportunities:</h4>
+                                <ul>
+                                    <li>Sponsorship (teams, events, programs)</li>
+                                    <li>In-kind Support (equipment, facilities, services)</li>
+                                    <li>Technical Partnerships (coaching, training, development)</li>
+                                    <li>Community Development Initiatives</li>
+                                </ul>
+                                
+                                <h4 class="mt-4">Benefits:</h4>
+                                <ul>
+                                    <li>Brand visibility and recognition</li>
+                                    <li>Community engagement and social impact</li>
+                                    <li>Access to events and networking opportunities</li>
+                                    <li>Customized partnership packages to meet your objectives</li>
+                                </ul>
+                                
+                                <a href="contact.html" class="btn btn-primary mt-4">Contact Us to Discuss</a>
+                            </div>
+                            <div>
+                                <img src="images/gallery/fan3.jpeg" alt="Partnership" style="width: 100%; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="application-form" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Application Form</h2>
+                <p>Fill out the form below to join the KKLFA family</p>
+            </div>
+            
+            <div class="card animate-on-scroll">
+                <div class="card-body">
+                    <form action="https://formspree.io/f/xeogbrrn" method="POST">
+                        <div class="form-group">
+                            <label for="role" class="form-label">I want to join as a: *</label>
+                            <select id="role" name="role" class="form-control" required>
+                                <option value="">Select an option</option>
+                                <option value="player">Player</option>
+                                <option value="coach">Coach</option>
+                                <option value="referee">Referee</option>
+                                <option value="volunteer">Volunteer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grid grid-2">
+                            <div class="form-group">
+                                <label for="first-name" class="form-label">First Name *</label>
+                                <input type="text" id="first-name" name="first_name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="last-name" class="form-label">Last Name *</label>
+                                <input type="text" id="last-name" name="last_name" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-2">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="dob" class="form-label">Date of Birth *</label>
+                            <input type="date" id="dob" name="date_of_birth" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address" class="form-label">Address</label>
+                            <textarea id="address" name="address" class="form-control" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience" class="form-label">Relevant Experience</label>
+                            <textarea id="experience" name="experience" class="form-control" rows="4" placeholder="Please describe any relevant experience you have in football or your chosen role."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="motivation" class="form-label">Motivation *</label>
+                            <textarea id="motivation" name="motivation" class="form-control" rows="4" placeholder="Please tell us why you want to join KKLFA and what you hope to contribute and gain from the experience." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Availability *</label>
+                            <div class="checkbox-group">
+                                <div>
+                                    <input type="checkbox" id="weekday-mornings" name="availability[]" value="Weekday Mornings">
+                                    <label for="weekday-mornings">Weekday Mornings</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="weekday-afternoons" name="availability[]" value="Weekday Afternoons">
+                                    <label for="weekday-afternoons">Weekday Afternoons</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="weekday-evenings" name="availability[]" value="Weekday Evenings">
+                                    <label for="weekday-evenings">Weekday Evenings</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="weekend-mornings" name="availability[]" value="Weekend Mornings">
+                                    <label for="weekend-mornings">Weekend Mornings</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="weekend-afternoons" name="availability[]" value="Weekend Afternoons">
+                                    <label for="weekend-afternoons">Weekend Afternoons</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <div>
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms">I agree to the terms and conditions *</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Members Say</h2>
+                <p>Hear from those who have already joined the KKLFA family</p>
+            </div>
+            
+            <div class="grid grid-3 animate-on-scroll">
+                <div class="card">
+                    <div class="card-body">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <img src="images/gallery/img.jpg" alt="Emmanuel Wani." style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                        </div>
+                        <p style="font-style: italic;">"Joining KKLFA as a player has been one of the best decisions I've made. Not only have I improved my football skills, but I've also made lifelong friends and become part of a supportive community."</p>
+                        <div style="text-align: center; margin-top: 1rem;">
+                            <strong>Emmanuel Wani</strong><br>
+                            <span>Player, Senior Men's Team</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <img src="images/gallery/player1.jpeg" alt="Sarah K." style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                        </div>
+                        <p style="font-style: italic;">"Volunteering with KKLFA has given me the opportunity to give back to my community while being part of something I'm passionate about. The impact we're making on young people's lives is truly rewarding."</p>
+                        <div style="text-align: center; margin-top: 1rem;">
+                            <strong>Sarah K.</strong><br>
+                            <span>Volunteer, Community Outreach</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <img src="images/gallery/imgg.jpg" alt="Julius Bongo." style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                        </div>
+                        <p style="font-style: italic;">"As a coach with KKLFA, I've had the privilege of helping young players develop both as athletes and as individuals. The support from the association has been fantastic, and I'm proud to be part of this journey."</p>
+                        <div style="text-align: center; margin-top: 1rem;">
+                            <strong>Julius Bongo.</strong><br>
+                            <span>Youth Coach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about joining KKLFA</p>
+            </div>
+            
+            <div class="faq-container animate-on-scroll">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are the membership fees?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Membership fees vary depending on the role and program. Players in our youth development program pay a nominal fee to cover basic costs, while senior team players have a slightly higher fee. Volunteer positions do not require a membership fee. Specific fee information will be provided during the application process.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need previous experience to join?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, previous experience is not always required. We welcome individuals at all skill and experience levels. For players, we have development programs suitable for beginners. For coaches and referees, we provide training and mentorship. What's most important is your enthusiasm, commitment, and willingness to learn.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much time commitment is required?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Time commitments vary by role. Players typically have 2-3 training sessions per week plus matches. Coaches are expected to attend all team training sessions and matches. Referees are scheduled based on availability. Volunteer commitments can be flexible, depending on the role and your availability. We understand that people have other commitments and try to be as accommodating as possible.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the application process?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The application process begins with submitting the form on this page. After review, we'll contact you to schedule an interview or tryout, depending on the role you're applying for. For players, this may involve a skills assessment. For coaches and referees, we'll discuss your experience and qualifications. The final step is orientation and onboarding to welcome you to the KKLFA family.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is there an age limit for joining?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our youth development program accepts players from age 8 and up. Senior teams are generally for ages 17 and above. For coaching and refereeing positions, applicants should be at least 16 years old, though exceptions may be made. Volunteer opportunities are available for all ages, with appropriate roles assigned based on age and capabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-box animate-on-scroll" style="background-color: var(--primary-color); color: white; padding: 3rem; border-radius: 8px; text-align: center;">
+                <h2>Ready to Join Our Team?</h2>
+                <p class="mb-4">Take the first step towards being part of the KKLFA family and making a difference in Kajo Keji County.</p>
+                <a href="#application-form" class="btn btn-secondary">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo">
+                            <img src="images/gallery/kklfa.jpeg" alt="KKLFA Logo" style="height: 40px;" border-radius="50px">
+                        </a>
+                    </div>
+                    <p>Promoting football excellence and community development in Kajo Keji County, South Sudan.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1F9a8gZ4jE"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@kajokejifa?si=ndn2SZHPyPT-CbME"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="match-schedule.html">Match Schedule</a></li>
+                        <li><a href="players.html">Players</a></li>
+                        <li><a href="join.html">Join the Team</a></li>
+                        <li><a href="donate.html">Support Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> kklfa2023@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +211 928 907 865</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kajo Keji County, Central Equatoria State, South Sudan</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kajo Keji Local Football Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tabs functionality
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-tab`).classList.add('active');
+                });
+            });
+            
+            // FAQ accordion functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = question.querySelector('i');
+                
+                // Initially hide all answers
+                answer.style.display = 'none';
+                
+                question.addEventListener('click', () => {
+                    // Toggle answer visibility
+                    if (answer.style.display === 'none') {
+                        answer.style.display = 'block';
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                        item.classList.add('active');
+                    } else {
+                        answer.style.display = 'none';
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                        item.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Role selection in form
+            const roleSelect = document.getElementById('role');
+            
+            roleSelect.addEventListener('change', () => {
+                // You could add logic here to show/hide specific form fields based on role
+                // For example, showing player-specific fields when 'player' is selected
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Kajo Keji Local Football Association</title>
+    <meta name="description" content="Latest news, updates, and stories from the Kajo Keji Local Football Association - stay informed about local football developments">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/gallery/kklfa.jpeg" alt="KKLFA Logo" style="height: 40px;">
+                </a>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="objectives.html">Objectives</a>
+                    <a href="committees.html">Committees</a>
+                    <a href="events.html">Events</a>
+                    <a href="players.html">Players</a>
+                    <a href="match-schedule.html">Match Schedule</a>
+                    
+                    <div class="dropdown">
+                        <a href="#">More</a>
+                        <div class="dropdown-content">
+                            <a href="gallery.html">Gallery</a>
+                            <a href="fan-zone.html">Fan Zone</a>
+                            <a href="news.html">News</a>
+                            <a href="achievements.html">Achievements</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                    
+                    <a href="join.html" class="btn btn-primary">Join Us</a>
+                    <a href="donate.html" class="btn btn-secondary">Donate</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="background-color: var(--primary-color);">
+        <div class="container">
+            <div class="hero-content animate-on-scroll">
+                <h1>News & Updates</h1>
+                <p>Stay informed about the latest developments in Kajo Keji football</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Filter Section -->
+    <section class="section">
+        <div class="container">
+            <div class="news-filter animate-on-scroll">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All News</button>
+                    <button class="filter-btn" data-filter="match-reports">Match Reports</button>
+                    <button class="filter-btn" data-filter="player-news">Player News</button>
+                    <button class="filter-btn" data-filter="community">Community</button>
+                    <button class="filter-btn" data-filter="announcements">Announcements</button>
+                </div>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="Search news..." id="news-search">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Story</h2>
+            </div>
+            
+            <div class="featured-news animate-on-scroll">
+                <div class="featured-news-image">
+                    <img src="images/gallery/img.jpg" alt="Kajo Keji Stars win local derby">
+                    <div class="news-category">Match Report</div>
+                </div>
+                
+                <div class="featured-news-content">
+                    <div class="news-meta">
+                        <span><i class="far fa-calendar"></i> May 20, 2025</span>
+                        <span><i class="far fa-user"></i> By James Lemi</span>
+                    </div>
+                    
+                    <h3>Kajo Keji Stars Triumph in Thrilling Local Derby</h3>
+                    
+                    <p>In a match that will be remembered for years to come, Kajo Keji Stars secured a dramatic 3-2 victory over their 
+                        local rivals Kajo Keji United in front of a record crowd at Kajo Keji Stadium.</p>
+                    
+                    <p>The match, which was part of the Kajo Keji Cup quarter-finals, saw Stars come from behind twice before scoring 
+                        a winner in the 89th minute through captain Victor Ladu.</p>
+                    
+                    <a href="news-single.html" class="btn btn-primary">Read Full Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest News</h2>
+            </div>
+            
+            <div class="news-grid animate-on-scroll">
+                <!-- News Item 1 -->
+                <div class="news-card" data-category="player-news">
+                    <div class="news-image">
+                        <img src="images/gallery/fa.jpeg" alt="Player of the Month">
+                        <div class="news-category">Player News</div>
+                    </div>
+                    
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> May 15, 2025</span>
+                            <span><i class="far fa-user"></i> By Emmanuel Kenyi</span>
+                        </div>
+                        
+                        <h3>Taylor Ladu Named Player of the Month for April</h3>
+                        
+                        <p>Kajo Keji Stars forward Taylor Ladu has been named KKLFA Player of the Month for April after scoring 8 goals in 5 matches, helping his team secure a place in the Kajo Keji Cup quarter-finals.</p>
+                        
+                        <a href="news-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- News Item 2 -->
+                <div class="news-card" data-category="community">
+                    <div class="news-image">
+                        <img src="images/gallery/player2.jpeg" alt="Community Football Day">
+                        <div class="news-category">Community</div>
+                    </div>
+                    
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> May 12, 2025</span>
+                            <span><i class="far fa-user"></i> By David Ladu</span>
+                        </div>
+                        
+                        <h3>KKLFA Announces Community Football Day on June 22nd</h3>
+                        
+                        <p>The Kajo Keji Local Football Association is excited to announce its annual Community Football Day, scheduled for June 22nd at Kajo Keji Stadium. The event will feature activities for all ages, food, music, and exhibition matches.</p>
+                        
+                        <a href="news-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- News Item 3 -->
+                <div class="news-card" data-category="announcements">
+                    <div class="news-image">
+                        <img src="images/gallery/player3.jpeg" alt="New Training Facility">
+                        <div class="news-category">Announcement</div>
+                    </div>
+                    
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> May 10, 2025</span>
+                            <span><i class="far fa-user"></i> By John Lemi</span>
+                        </div>
+                        
+                        <h3>KKLFA Secures Funding for New Training Facility</h3>
+                        
+                        <p>The Kajo Keji Local Football Association has secured funding for a new state-of-the-art training facility, which will benefit all teams in the association. Construction is expected to begin next month.</p>
+                        
+                        <a href="news-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- News Item 4 -->
+                <div class="news-card" data-category="match-reports">
+                    <div class="news-image">
+                        <img src="images/gallery/player5.jpeg" alt="Match Report">
+                        <div class="news-category">Match Report</div>
+                    </div>
+                    
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> May 8, 2025</span>
+                            <span><i class="far fa-user"></i> By Mary Lojore</span>
+                        </div>
+                        
+                        <h3>Kajo Keji United Secure Semi-Final Spot with Convincing Win</h3>
+                        
+                        <p>Kajo Keji United have booked their place in the Kajo Keji Cup semi-finals with a convincing 4-0 victory over Kansuk FC. United dominated from start to finish, with goals from four different scorers.</p>
+                        
+                        <a href="news-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- News Item 5 -->
+                <div class="news-card" data-category="player-news">
+                    <div class="news-image">
+                        <img src="images/gallery/fan5.jpeg" alt="Youth Academy">
+                        <div class="news-category">Player News</div>
+                    </div>
+                    
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> May 5, 2025</span>
+                            <span><i class="far fa-user"></i> By James Lemi</span>
+                        </div>
+                        
+                        <h3>KKLFA Youth Academy Graduates Three Players to Senior Teams</h3>
+                        
+                        <p>Three talented young players from the KKLFA Youth Academy have been promoted to senior teams in the association. The graduates, all aged 18, have been part of the academy for the past four years.</p>
+                        
+                        <a href="news-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- News Item 6 -->
+                <div class="news-card" data-category="community">
+                    <div class="news-image">
+                        <img src="images/gallery/player8.jpeg" alt="School Program">
+                        <div class="news-category">Community</div>
+                    </div>
+                    
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> May 3, 2025</span>
+                            <span><i class="far fa-user"></i> By Sarah Kenyi</span>
+                        </div>
+                        
+                        <h3>KKLFA Launches School Football Program in Kajo Keji County</h3>
+                        
+                        <p>The Kajo Keji Local Football Association has launched a new school football program aimed at 
+                            developing young talent in the county. The program will initially involve 10 schools and will include coaching, 
+                            equipment, and inter-school competitions.</p>
+                        
+                        <a href="news-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination animate-on-scroll">
+                <a href="#" class="active">1</a> <!-- Its here i can link to more 2, 3, 4 etc pages-->>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Categories Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>News Categories</h2>
+            </div>
+            
+            <div class="category-grid animate-on-scroll">
+                <!-- Category 1 -->
+                <div class="category-card">
+                    <div class="category-icon" style="background-color: var(--primary-color);">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h3>Match Reports</h3>
+                    <p>Detailed reports and analysis of all KKLFA matches</p>
+                    <a href="#" class="btn btn-outline">View All</a>
+                </div>
+                
+                <!-- Category 2 -->
+                <div class="category-card">
+                    <div class="category-icon" style="background-color: var(--secondary-color);">
+                        <i class="fas fa-user-alt"></i>
+                    </div>
+                    <h3>Player News</h3>
+                    <p>Updates on player transfers, achievements, and profiles</p>
+                    <a href="#" class="btn btn-outline">View All</a>
+                </div>
+                
+                <!-- Category 3 -->
+                <div class="category-card">
+                    <div class="category-icon" style="background-color: #28a745;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>News about KKLFA's community initiatives and impact</p>
+                    <a href="#" class="btn btn-outline">View All</a>
+                </div>
+                
+                <!-- Category 4 -->
+                <div class="category-card">
+                    <div class="category-icon" style="background-color: #6c757d;">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Announcements</h3>
+                    <p>Official announcements and updates from KKLFA</p>
+                    <a href="#" class="btn btn-outline">View All</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="cta-box animate-on-scroll" style="background-color: var(--primary-color); color: white; padding: 3rem; border-radius: 8px; text-align: center;">
+                <h2>Never Miss an Update</h2>
+                <p class="mb-4">Subscribe to our newsletter to receive the latest news and updates from KKLFA directly to your inbox.</p>
+                
+                <form class="newsletter-form">
+                    <div class="form-group-inline">
+                        <input type="email" placeholder="Your email address" class="form-control" required>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </div>
+                    <div class="form-check mt-2">
+                        <input type="checkbox" id="terms" class="form-check-input" required>
+                        <label for="terms" class="form-check-label">I agree to receive emails from KKLFA and accept the <a href="#" style="color: white; text-decoration: underline;">privacy policy</a></label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo">
+                            <img src="images/gallery/kklfa.jpeg" alt="KKLFA Logo" style="height: 40px;">
+                        </a>
+                    </div>
+                    <p>Promoting football excellence and community development in Kajo Keji County, South Sudan.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1F9a8gZ4jE"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@kajokejifa?si=ndn2SZHPyPT-CbME"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="match-schedule.html">Match Schedule</a></li>
+                        <li><a href="players.html">Players</a></li>
+                        <li><a href="join.html">Join the Team</a></li>
+                        <li><a href="donate.html">Support Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> kklfa2023@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +211 928 907 865</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kajo Keji County, Central Equatoria State, South Sudan</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kajo Keji Local Football Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // News filtering functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const newsCards = document.querySelectorAll('.news-card');
+            const searchInput = document.getElementById('news-search');
+            
+            // Filter by category
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Get filter value
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // Show/hide news cards based on filter
+                    newsCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Search functionality
+            searchInput.addEventListener('keyup', () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                
+                newsCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const content = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Style news cards
+            newsCards.forEach(card => {
+                card.style.backgroundColor = 'white';
+                card.style.borderRadius = '8px';
+                card.style.overflow = 'hidden';
+                card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+            });
+            
+            // Add hover effect to news cards
+            newsCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-5px)';
+                    card.style.boxShadow = '0 10px 15px rgba(0, 0, 0, 0.1)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                });
+            });
+            
+            // Style news categories
+            const newsCategories = document.querySelectorAll('.news-category');
+            newsCategories.forEach(category => {
+                category.style.position = 'absolute';
+                category.style.top = '10px';
+                category.style.right = '10px';
+                category.style.backgroundColor = 'var(--secondary-color)';
+                category.style.color = 'white';
+                category.style.padding = '0.25rem 0.5rem';
+                category.style.borderRadius = '4px';
+                category.style.fontSize = '0.75rem';
+                category.style.fontWeight = 'bold';
+            });
+            
+            // Style featured news
+            const featuredNews = document.querySelector('.featured-news');
+            if (featuredNews) {
+                featuredNews.style.display = 'flex';
+                featuredNews.style.flexDirection = 'column';
+                featuredNews.style.backgroundColor = 'white';
+                featuredNews.style.borderRadius = '8px';
+                featuredNews.style.overflow = 'hidden';
+                featuredNews.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                
+                // Make featured news responsive
+                if (window.innerWidth >= 768) {
+                    featuredNews.style.flexDirection = 'row';
+                }
+            }
+            
+            // Style featured news image
+            const featuredNewsImage = document.querySelector('.featured-news-image');
+            if (featuredNewsImage) {
+                featuredNewsImage.style.flex = '0 0 100%';
+                featuredNewsImage.style.maxHeight = '300px';
+                featuredNewsImage.style.overflow = 'hidden';
+                featuredNewsImage.style.position = 'relative';
+                
+                // Make image responsive
+                if (window.innerWidth >= 768) {
+                    featuredNewsImage.style.flex = '0 0 50%';
+                    featuredNewsImage.style.maxHeight = 'none';
+                }
+                
+                // Style the img element
+                const img = featuredNewsImage.querySelector('img');
+                if (img) {
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'cover';
+                }
+            }
+            
+            // Style featured news content
+            const featuredNewsContent = document.querySelector('.featured-news-content');
+            if (featuredNewsContent) {
+                featuredNewsContent.style.padding = '1.5rem';
+                featuredNewsContent.style.flex = '1';
+            }
+            
+            // Style news meta
+            const newsMeta = document.querySelectorAll('.news-meta');
+            newsMeta.forEach(meta => {
+                meta.style.display = 'flex';
+                meta.style.gap = '1rem';
+                meta.style.marginBottom = '1rem';
+                meta.style.color = '#6c757d';
+                meta.style.fontSize = '0.875rem';
+            });
+            
+            // Style read more links
+            const readMoreLinks = document.querySelectorAll('.read-more');
+            readMoreLinks.forEach(link => {
+                link.style.display = 'inline-flex';
+                link.style.alignItems = 'center';
+                link.style.color = 'var(--primary-color)';
+                link.style.fontWeight = 'bold';
+                link.style.marginTop = '1rem';
+                link.style.textDecoration = 'none';
+                
+                // Style the icon
+                const icon = link.querySelector('i');
+                if (icon) {
+                    icon.style.marginLeft = '0.5rem';
+                    icon.style.transition = 'transform 0.3s ease';
+                }
+                
+                // Add hover effect
+                link.addEventListener('mouseenter', () => {
+                    const icon = link.querySelector('i');
+                    if (icon) {
+                        icon.style.transform = 'translateX(5px)';
+                    }
+                });
+                
+                link.addEventListener('mouseleave', () => {
+                    const icon = link.querySelector('i');
+                    if (icon) {
+                        icon.style.transform = 'translateX(0)';
+                    }
+                });
+            });
+            
+            // Style pagination
+            const pagination = document.querySelector('.pagination');
+            if (pagination) {
+                pagination.style.display = 'flex';
+                pagination.style.justifyContent = 'center';
+                pagination.style.gap = '0.5rem';
+                pagination.style.marginTop = '2rem';
+            }
+            
+            const paginationLinks = document.querySelectorAll('.pagination a');
+            paginationLinks.forEach(link => {
+                link.style.display = 'flex';
+                link.style.alignItems = 'center';
+                link.style.justifyContent = 'center';
+                link.style.width = '40px';
+                link.style.height = '40px';
+                link.style.borderRadius = '50%';
+                link.style.backgroundColor = 'white';
+                link.style.color = '#333';
+                link.style.textDecoration = 'none';
+                link.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+                link.style.transition = 'all 0.3s ease';
+                
+                // Style active link
+                if (link.classList.contains('active')) {
+                    link.style.backgroundColor = 'var(--primary-color)';
+                    link.style.color = 'white';
+                }
+                
+                // Add hover effect
+                link.addEventListener('mouseenter', () => {
+                    if (!link.classList.contains('active')) {
+                        link.style.backgroundColor = '#f8f9fa';
+                    }
+                });
+                
+                link.addEventListener('mouseleave', () => {
+                    if (!link.classList.contains('active')) {
+                        link.style.backgroundColor = 'white';
+                    }
+                });
+            });
+            
+            // Style category cards
+            const categoryCards = document.querySelectorAll('.category-card');
+            categoryCards.forEach(card => {
+                card.style.backgroundColor = 'white';
+                card.style.borderRadius = '8px';
+                card.style.padding = '2rem';
+                card.style.textAlign = 'center';
+                card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+            });
+            
+            // Add hover effect to category cards
+            categoryCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-5px)';
+                    card.style.boxShadow = '0 10px 15px rgba(0, 0, 0, 0.1)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                });
+            });
+            
+            // Style category icons
+            const categoryIcons = document.querySelectorAll('.category-icon');
+            categoryIcons.forEach(icon => {
+                icon.style.width = '80px';
+                icon.style.height = '80px';
+                icon.style.borderRadius = '50%';
+                icon.style.display = 'flex';
+                icon.style.alignItems = 'center';
+                icon.style.justifyContent = 'center';
+                icon.style.margin = '0 auto 1.5rem';
+                
+                // Style the icon
+                const i = icon.querySelector('i');
+                if (i) {
+                    i.style.color = 'white';
+                    i.style.fontSize = '2rem';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

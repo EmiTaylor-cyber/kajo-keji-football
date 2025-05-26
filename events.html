@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Kajo Keji Local Football Association</title>
+    <meta name="description" content="Upcoming and past events organized by the Kajo Keji Local Football Association including matches, tournaments, training sessions, and community activities">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .calendar-grid {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr); /* 7 columns for 7 days */
+                gap: 5px;
+            }
+
+            .calendar-day {
+                border: 1px solid #ccc;
+                padding: 10px;
+                min-height: 80px;
+                position: relative;
+                background-color: #fff;
+            }
+
+            .calendar-day.empty {
+                background-color: transparent;
+                border: none;
+            }
+            .day-number {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            .event-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                margin: 2px 2px 0 0;
+                display: inline-block;
+            }
+                        .calendar-legend {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-top: 20px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .legend-item {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 14px;
+            }
+
+            .legend-color {
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                border-radius: 50%;
+            }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/gallery/kklfa.jpeg" alt="KKLFA Logo" style="height: 40px;">
+                </a>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="objectives.html">Objectives</a>
+                    <a href="committees.html">Committees</a>
+                    <a href="events.html">Events</a>
+                    <a href="players.html">Players</a>
+                    <a href="match-schedule.html">Match Schedule</a>
+                    
+                    <div class="dropdown">
+                        <a href="#">More</a>
+                        <div class="dropdown-content">
+                            <a href="gallery.html">Gallery</a>
+                            <a href="fan-zone.html">Fan Zone</a>
+                            <a href="news.html">News</a>
+                            <a href="achievements.html">Achievements</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                    
+                    <a href="join.html" class="btn btn-primary">Join Us</a>
+                    <a href="donate.html" class="btn btn-secondary">Donate</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="background-color: var(--primary-color);">
+        <div class="container">
+            <div class="hero-content animate-on-scroll">
+                <h1>Events</h1>
+                <p>Upcoming and past events organized by the Kajo Keji Local Football Association</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Filter Section -->
+    <section class="section">
+        <div class="container">
+            <div class="filter-container animate-on-scroll">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Events</button>
+                    <button class="filter-tab" data-filter="matches">Matches</button>
+                    <button class="filter-tab" data-filter="tournaments">Tournaments</button>
+                    <button class="filter-tab" data-filter="training">Training</button>
+                    <button class="filter-tab" data-filter="community">Community</button>
+                </div>
+                
+                <div class="search-filter">
+                    <input type="text" id="event-search" placeholder="Search events...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Upcoming Events</h2>
+                <p>Join us at our upcoming events and activities</p>
+            </div>
+            
+            <div class="events-container animate-on-scroll">
+                <!-- Event 1 -->
+                <div class="event-card" data-category="matches">
+                    <div class="event-date">
+                        <div class="date-box">
+                            <span class="month">JUN</span>
+                            <span class="day">15</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="event-details">
+                        <h3>KKLFA Premier League: Round 10</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 3:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Kajo Keji Stadium</span>
+                            <span><i class="fas fa-tag"></i> Match</span>
+                        </div>
+                        <p>Join us for Round 10 of the KKLFA Premier League featuring top teams from Kajo Keji County competing for the championship.</p>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-sm btn-primary">Details</a>
+                            <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="event-card" data-category="training">
+                    <div class="event-date">
+                        <div class="date-box">
+                            <span class="month">JUN</span>
+                            <span class="day">18</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="event-details">
+                        <h3>Youth Coaching Workshop</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 9:00 AM - 4:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> KKLFA Training Center</span>
+                            <span><i class="fas fa-tag"></i> Training</span>
+                        </div>
+                        <p>A comprehensive workshop for youth coaches focusing on modern coaching techniques, player development, and age-appropriate training methods.</p>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-sm btn-primary">Register</a>
+                            <a href="#" class="btn btn-sm btn-outline">Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="event-card" data-category="community">
+                    <div class="event-date">
+                        <div class="date-box">
+                            <span class="month">JUN</span>
+                            <span class="day">22</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="event-details">
+                        <h3>Community Football Day</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 10:00 AM - 5:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Kajo Keji Community Field</span>
+                            <span><i class="fas fa-tag"></i> Community</span>
+                        </div>
+                        <p>A day of football activities for the whole community, including small-sided games, skills challenges, and football-related entertainment for all ages.</p>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-sm btn-primary">Details</a>
+                            <a href="#" class="btn btn-sm btn-outline">Volunteer</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 4 -->
+                <div class="event-card" data-category="tournaments">
+                    <div class="event-date">
+                        <div class="date-box">
+                            <span class="month">JUL</span>
+                            <span class="day">05</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="event-details">
+                        <h3>Kajo Keji Cup: Quarter Finals</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 2:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Kajo Keji Stadium</span>
+                            <span><i class="fas fa-tag"></i> Tournament</span>
+                        </div>
+                        <p>The quarter-final matches of the prestigious Kajo Keji Cup, featuring the top 8 teams from the preliminary rounds competing for a place in the semi-finals.</p>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-sm btn-primary">Get Tickets</a>
+                            <a href="#" class="btn btn-sm btn-outline">Match Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 5 -->
+                <div class="event-card" data-category="training">
+                    <div class="event-date">
+                        <div class="date-box">
+                            <span class="month">JUL</span>
+                            <span class="day">12</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="event-details">
+                        <h3>Referee Training Course</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 9:00 AM - 3:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> KKLFA Training Center</span>
+                            <span><i class="fas fa-tag"></i> Training</span>
+                        </div>
+                        <p>A comprehensive training course for new and existing referees, covering the Laws of the Game, positioning, decision-making, and match management.</p>
+                        <div class="event-actions">
+                            <a href="join.html" class="btn btn-sm btn-primary">Register</a>
+                            <a href="players.html" class="btn btn-sm btn-outline">Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 6 -->
+                <div class="event-card" data-category="community">
+                    <div class="event-date">
+                        <div class="date-box">
+                            <span class="month">JUL</span>
+                            <span class="day">20</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="event-details">
+                        <h3>Football for Health Campaign</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 10:00 AM - 4:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Kajo Keji Health Center</span>
+                            <span><i class="fas fa-tag"></i> Community</span>
+                        </div>
+                        <p>A community health initiative combining football activities with health education, screenings, and awareness about important health issues affecting the community.</p>
+                        <div class="event-actions">
+                            <a href="newsletter.html" class="btn btn-sm btn-primary">Details</a>
+                            <a href="join.html" class="btn btn-sm btn-outline">Volunteer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="match-schedule.html" class="btn btn-primary">View Full Match Schedule</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Event Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Event</h2>
+                <p>Don't miss our biggest event of the season</p>
+            </div>
+            
+            <div class="featured-event animate-on-scroll">
+                <div class="featured-event-image">
+                    <img src="images/gallery/img.jpeg" alt="Kajo Keji Cup Final">
+                </div>
+                
+                <div class="featured-event-content">
+                    <div class="featured-event-date">
+                        <div class="date-box large">
+                            <span class="month">AUG</span>
+                            <span class="day">15</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    
+                    <h3>Kajo Keji Cup Final 2025</h3>
+                    <div class="event-meta">
+                        <span><i class="fas fa-clock"></i> 3:00 PM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Kajo Keji Stadium</span>
+                        <span><i class="fas fa-tag"></i> Tournament</span>
+                    </div>
+                    
+                    <p>The culmination of the prestigious Kajo Keji Cup tournament, featuring the two best teams in the county competing for the championship trophy. This annual event is the highlight of the football calendar in Kajo Keji County.</p>
+                    
+                    <p>The final will be preceded by a cultural performance and youth exhibition match, making it a full day of entertainment and celebration for the whole community.</p>
+                    
+                    <div class="event-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-trophy"></i>
+                            <span>Championship Trophy</span>
+                        </div>
+                        
+                        <div class="highlight">
+                            <i class="fas fa-music"></i>
+                            <span>Cultural Performances</span>
+                        </div>
+                        
+                        <div class="highlight">
+                            <i class="fas fa-utensils"></i>
+                            <span>Food & Refreshments</span>
+                        </div>
+                        
+                        <div class="highlight">
+                            <i class="fas fa-child"></i>
+                            <span>Family Activities</span>
+                        </div>
+                    </div>
+                    
+                    <div class="event-actions mt-4">
+                        <a href="contact.html" class="btn btn-primary">Get Tickets</a>
+                        <a href="match-schedule.html" class="btn btn-outline">Event Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Events Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Past Events</h2>
+                <p>Highlights from our recent events and activities</p>
+            </div>
+            
+            <div class="grid grid-3 animate-on-scroll">
+                <!-- Past Event 1 -->
+                <div class="card" data-category="matches">
+                    <img src="images/gallery/imgg.jpg" alt="KKLFA Premier League Opening" class="card-img-top">
+                    <div class="card-body">
+                        <div class="event-meta mb-2">
+                            <span><i class="fas fa-calendar-alt"></i> May 10, 2025</span>
+                            <span><i class="fas fa-tag"></i> Match</span>
+                        </div>
+                        <h3>KKLFA Premier League Opening</h3>
+                        <p>The exciting opening match of the 2025 KKLFA Premier League season, featuring defending champions Kajo Keji Stars against Kajo Keji United.</p>
+                        <a href="https://youtube.com/@kajokejifa?si=ndn2SZHPyPT-CbME" class="btn btn-sm btn-primary mt-3">View Highlights</a>
+                    </div>
+                </div>
+                
+                <!-- Past Event 2 -->
+                <div class="card" data-category="training">
+                    <img src="images/gallery/img.jpg" alt="Coaching Certification Course" class="card-img-top">
+                    <div class="card-body">
+                        <div class="event-meta mb-2">
+                            <span><i class="fas fa-calendar-alt"></i> April 25, 2025</span>
+                            <span><i class="fas fa-tag"></i> Training</span>
+                        </div>
+                        <h3>Coaching Certification Course</h3>
+                        <p>A comprehensive coaching certification course for local coaches, providing them with the knowledge and skills to develop players effectively.</p>
+                        <a href="gallery.html" class="btn btn-sm btn-primary mt-3">View Gallery</a>
+                    </div>
+                </div>
+                
+                <!-- Past Event 3 -->
+                <div class="card" data-category="community">
+                    <img src="images/gallery/player1.jpeg" alt="Schools Football Festival" class="card-img-top">
+                    <div class="card-body">
+                        <div class="event-meta mb-2">
+                            <span><i class="fas fa-calendar-alt"></i> April 15, 2025</span>
+                            <span><i class="fas fa-tag"></i> Community</span>
+                        </div>
+                        <h3>Schools Football Festival</h3>
+                        <p>A fun-filled day of football activities for schools in Kajo Keji County, promoting physical activity and teamwork among students.</p>
+                        <a href="news.html" class="btn btn-sm btn-primary mt-3">View Report</a>
+                    </div>
+                </div>
+                
+                <!-- Past Event 4 -->
+                <div class="card" data-category="tournaments">
+                    <img src="images/gallery/player3.jpeg" alt="Youth Tournament Final" class="card-img-top">
+                    <div class="card-body">
+                        <div class="event-meta mb-2">
+                            <span><i class="fas fa-calendar-alt"></i> March 30, 2025</span>
+                            <span><i class="fas fa-tag"></i> Tournament</span>
+                        </div>
+                        <h3>Youth Tournament Final</h3>
+                        <p>The exciting conclusion of the U17 youth tournament, showcasing the best young talent in Kajo Keji County.</p>
+                        <a href="https://youtube.com/@kajokejifa?si=ndn2SZHPyPT-CbME" class="btn btn-sm btn-primary mt-3">View Highlights</a>
+                    </div>
+                </div>
+                
+                <!-- Past Event 5 -->
+                <div class="card" data-category="community">
+                    <img src="images/gallery/player6.jpeg" alt="Football for Peace Event" class="card-img-top">
+                    <div class="card-body">
+                        <div class="event-meta mb-2">
+                            <span><i class="fas fa-calendar-alt"></i> March 15, 2025</span>
+                            <span><i class="fas fa-tag"></i> Community</span>
+                        </div>
+                        <h3>Football for Peace Event</h3>
+                        <p>A special event using football to promote peace, unity, and understanding among different communities in Kajo Keji County.</p>
+                        <a href="newsletter.html" class="btn btn-sm btn-primary mt-3">View Report</a>
+                    </div>
+                </div>
+                
+                <!-- Past Event 6 -->
+                <div class="card" data-category="training">
+                    <img src="images/gallery/player9.jpeg" alt="Goalkeeper Training Camp" class="card-img-top">
+                    <div class="card-body">
+                        <div class="event-meta mb-2">
+                            <span><i class="fas fa-calendar-alt"></i> February 28, 2025</span>
+                            <span><i class="fas fa-tag"></i> Training</span>
+                        </div>
+                        <h3>Goalkeeper Training Camp</h3>
+                        <p>A specialized training camp for goalkeepers of all ages, focusing on technique, positioning, and the mental aspects of goalkeeping.</p>
+                        <a href="gallery.html" class="btn btn-sm btn-primary mt-3">View Gallery</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="events.html" class="btn btn-secondary">Load More Past Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Calendar Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Event Calendar</h2>
+                <p>Plan ahead with our complete event schedule</p>
+            </div>
+            <div class="calendar-container animate-on-scroll">
+                <div class="calendar-header">
+                    <button id="prev-month" class="calendar-nav"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="calendar-month">June 2025</h3>
+                    <button id="next-month" class="calendar-nav"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <div class="calendar-grid">
+                    <div class="calendar-day-header">Sun</div>
+                    <div class="calendar-day-header">Mon</div>
+                    <div class="calendar-day-header">Tue</div>
+                    <div class="calendar-day-header">Wed</div>
+                    <div class="calendar-day-header">Thu</div>
+                    <div class="calendar-day-header">Fri</div>
+                    <div class="calendar-day-header">Sat</div>
+                    
+                    <!-- Calendar days will be dynamically generated by JavaScript -->
+                </div>
+                
+                <div class="calendar-legend">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: var(--primary-color);"></span>
+                        <span>Matches</span>
+                    </div>
+                    
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: var(--secondary-color);"></span>
+                        <span>Tournaments</span>
+                    </div>
+                    
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #6c757d;"></span>
+                        <span>Training</span>
+                    </div>
+                    
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #28a745;"></span>
+                        <span>Community</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="event-details-popup" class="event-popup">
+                <div class="event-popup-content">
+                    <span class="close-popup">&times;</span>
+                    <h3 id="popup-title"></h3>
+                    <div id="popup-details"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Host an Event Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="grid grid-2 animate-on-scroll">
+                <div>
+                    <h2>Host an Event with KKLFA</h2>
+                    <p>Are you interested in organizing a football event in Kajo Keji County? KKLFA can help you plan and execute successful football events, from friendly matches to tournaments and community activities.</p>
+                    
+                    <h3 class="mt-4">We can provide:</h3>
+                    <ul style="padding-left: 1.5rem;">
+                        <li>Technical expertise and guidance</li>
+                        <li>Access to facilities and equipment</li>
+                        <li>Qualified referees and officials</li>
+                        <li>Promotion and publicity</li>
+                        <li>Volunteer support</li>
+                    </ul>
+                    
+                    <p class="mt-4">Whether you're a school, community organization, business, or individual, we're here to support football initiatives that align with our mission of developing football and transforming communities in Kajo Keji County.</p>
+                    
+                    <a href="contact.html" class="btn btn-primary mt-3">Contact Us to Discuss</a>
+                </div>
+                
+                <div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Event Request Form</h3>
+                            <form class="demo-form">
+                                <div class="form-group">
+                                    <label for="event-type" class="form-label">Event Type *</label>
+                                    <select id="event-type" class="form-control" required>
+                                        <option value="">Select an option</option>
+                                        <option value="match">Match</option>
+                                        <option value="tournament">Tournament</option>
+                                        <option value="training">Training/Workshop</option>
+                                        <option value="community">Community Event</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            
+                                <form class="demo-form" action="https://formspree.io/f/xeogbrrn" method="POST"></form>
+                                <div class="form-group">
+                                    <label for="event-name" class="form-label">Event Name *</label>
+                                    <input type="text" id="event-name" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="event-date" class="form-label">Proposed Date *</label>
+                                    <input type="date" id="event-date" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="organization" class="form-label">Organization/Group</label>
+                                    <input type="text" id="organization" class="form-control">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-name" class="form-label">Contact Person *</label>
+                                    <input type="text" id="contact-name" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-email" class="form-label">Email *</label>
+                                    <input type="email" id="contact-email" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-phone" class="form-label">Phone *</label>
+                                    <input type="tel" id="contact-phone" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="event-details" class="form-label">Event Details *</label>
+                                    <textarea id="event-details" class="form-control" rows="4" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo">
+                            <img src="images/gallery/kklfa.jpeg" alt="KKLFA Logo" style="height: 40px;">
+                        </a>
+                    </div>
+                    <p>Promoting football excellence and community development in Kajo Keji County, South Sudan.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1F9a8gZ4jE"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@kajokejifa?si=ndn2SZHPyPT-CbME"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="match-schedule.html">Match Schedule</a></li>
+                        <li><a href="players.html">Players</a></li>
+                        <li><a href="join.html">Join the Team</a></li>
+                        <li><a href="donate.html">Support Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> kklfa2023@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +211 928 907 865</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kajo Keji County, Central Equatoria State, South Sudan</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kajo Keji Local Football Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const eventCards = document.querySelectorAll('.event-card');
+            const pastEventCards = document.querySelectorAll('.card[data-category]');
+            const searchInput = document.getElementById('event-search');
+            
+            // Set up filter tabs
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    // Get filter value
+                    const filter = tab.getAttribute('data-filter');
+                    
+                    // Filter upcoming events
+                    eventCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    
+                    // Filter past events
+                    pastEventCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Search functionality
+            searchInput.addEventListener('input', () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                
+                // Search in upcoming events
+                eventCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    const category = card.getAttribute('data-category').toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm) || category.includes(searchTerm)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Search in past events
+                pastEventCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    const category = card.getAttribute('data-category').toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm) || category.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Calendar functionality
+            const calendarGrid = document.querySelector('.calendar-grid');
+            const calendarMonth = document.getElementById('calendar-month');
+            const prevMonthBtn = document.getElementById('prev-month');
+            const nextMonthBtn = document.getElementById('next-month');
+            const popup = document.getElementById('event-details-popup');
+            const popupTitle = document.getElementById('popup-title');
+            const popupDetails = document.getElementById('popup-details');
+            const closePopup = document.querySelector('.close-popup');
+            
+            // Sample event data
+            const events = [
+                { date: '2025-06-15', title: 'KKLFA Premier League: Round 10', type: 'matches', time: '3:00 PM', location: 'Kajo Keji Stadium' },
+                { date: '2025-06-18', title: 'Youth Coaching Workshop', type: 'training', time: '9:00 AM - 4:00 PM', location: 'KKLFA Training Center' },
+                { date: '2025-06-22', title: 'Community Football Day', type: 'community', time: '10:00 AM - 5:00 PM', location: 'Kajo Keji Community Field' },
+                { date: '2025-07-05', title: 'Kajo Keji Cup: Quarter Finals', type: 'tournaments', time: '2:00 PM', location: 'Kajo Keji Stadium' },
+                { date: '2025-07-12', title: 'Referee Training Course', type: 'training', time: '9:00 AM - 3:00 PM', location: 'KKLFA Training Center' },
+                { date: '2025-07-20', title: 'Football for Health Campaign', type: 'community', time: '10:00 AM - 4:00 PM', location: 'Kajo Keji Health Center' },
+                { date: '2025-08-15', title: 'Kajo Keji Cup Final 2025', type: 'tournaments', time: '3:00 PM', location: 'Kajo Keji Stadium' }
+            ];
+            
+            let currentDate = new Date(2025, 5); // June 2025
+            
+            // Generate calendar
+            function generateCalendar(date) {
+                // Clear existing calendar days
+                while (calendarGrid.children.length > 7) { // Keep the header row
+                    calendarGrid.removeChild(calendarGrid.lastChild);
+                }
+                
+                // Update month display
+                const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                calendarMonth.textContent = `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+                
+                // Get first day of month and number of days
+                const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+                const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+                const daysInMonth = lastDay.getDate();
+                
+                // Add empty cells for days before first day of month
+                let dayOfWeek = firstDay.getDay();
+                for (let i = 0; i < dayOfWeek; i++) {
+                    const emptyDay = document.createElement('div');
+                    emptyDay.className = 'calendar-day empty';
+                    calendarGrid.appendChild(emptyDay);
+                }
+                
+                // Add days of the month
+                for (let i = 1; i <= daysInMonth; i++) {
+                    const dayCell = document.createElement('div');
+                    dayCell.className = 'calendar-day';
+                    
+                    const dayNumber = document.createElement('div');
+                    dayNumber.className = 'day-number';
+                    dayNumber.textContent = i;
+                    dayCell.appendChild(dayNumber);
+                    
+                    // Check for events on this day
+                    const currentDateStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+                    const dayEvents = events.filter(event => event.date === currentDateStr);
+                    
+                    if (dayEvents.length > 0) {
+                        const eventContainer = document.createElement('div');
+                        eventContainer.className = 'day-events';
+                        
+                        dayEvents.forEach(event => {
+                            const eventDot = document.createElement('div');
+                            eventDot.className = 'event-dot';
+                            
+                            // Set color based on event type
+                            switch (event.type) {
+                                case 'matches':
+                                    eventDot.style.backgroundColor = 'var(--primary-color)';
+                                    break;
+                                case 'tournaments':
+                                    eventDot.style.backgroundColor = 'var(--secondary-color)';
+                                    break;
+                                case 'training':
+                                    eventDot.style.backgroundColor = '#6c757d';
+                                    break;
+                                case 'community':
+                                    eventDot.style.backgroundColor = '#28a745';
+                                    break;
+                                default:
+                                    eventDot.style.backgroundColor = '#007bff';
+                            }
+                            
+                            eventDot.setAttribute('data-event', JSON.stringify(event));
+                            eventDot.addEventListener('click', (e) => {
+                                e.stopPropagation();
+                                const eventData = JSON.parse(e.target.getAttribute('data-event'));
+                                showEventDetails(eventData);
+                            });
+                            
+                            eventContainer.appendChild(eventDot);
+                        });
+                        
+                        dayCell.appendChild(eventContainer);
+                        
+                        // Make the entire day cell clickable to show first event
+                        dayCell.addEventListener('click', () => {
+                            showEventDetails(dayEvents[0]);
+                        });
+                    }
+                    
+                    calendarGrid.appendChild(dayCell);
+                }
+            }
+            
+            // Show event details in popup
+            function showEventDetails(event) {
+                popupTitle.textContent = event.title;
+                
+                popupDetails.innerHTML = `
+                    <p><strong>Date:</strong> ${formatDate(event.date)}</p>
+                    <p><strong>Time:</strong> ${event.time}</p>
+                    <p><strong>Location:</strong> ${event.location}</p>
+                    <p><strong>Type:</strong> ${event.type.charAt(0).toUpperCase() + event.type.slice(1)}</p>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-sm btn-primary">Details</a>
+                        <a href="#" class="btn btn-sm btn-outline">Add to Calendar</a>
+                    </div>
+                `;
+                
+                popup.style.display = 'block';
+            }
+            
+            // Format date for display
+            function formatDate(dateStr) {
+                const date = new Date(dateStr);
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                return date.toLocaleDateString('en-US', options);
+            }
+            
+            // Close popup
+            closePopup.addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
+            
+            // Close popup when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+            
+            // Navigate to previous month
+            prevMonthBtn.addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() - 1);
+                generateCalendar(currentDate);
+            });
+            
+            // Navigate to next month
+            nextMonthBtn.addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                generateCalendar(currentDate);
+            });
+            
+            // Initialize calendar
+            generateCalendar(currentDate);
+            
+            // Style event cards
+            const eventDateBoxes = document.querySelectorAll('.date-box');
+            eventDateBoxes.forEach(box => {
+                box.style.backgroundColor = 'var(--primary-color)';
+                box.style.color = 'white';
+                box.style.padding = '0.5rem';
+                box.style.borderRadius = '4px';
+                box.style.textAlign = 'center';
+                box.style.minWidth = '60px';
+            });
+            
+            // Style event highlights
+            const eventHighlights = document.querySelector('.event-highlights');
+            if (eventHighlights) {
+                eventHighlights.style.display = 'grid';
+                eventHighlights.style.gridTemplateColumns = 'repeat(2, 1fr)';
+                eventHighlights.style.gap = '1rem';
+                eventHighlights.style.marginTop = '1rem';
+            }
+            
+            const highlights = document.querySelectorAll('.highlight');
+            highlights.forEach(highlight => {
+                highlight.style.display = 'flex';
+                highlight.style.alignItems = 'center';
+                highlight.style.gap = '0.5rem';
+            });
+        });
+    </script>
+</body>
+</html>

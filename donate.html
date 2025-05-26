@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Kajo Keji Local Football Association</title>
+    <meta name="description" content="Support the Kajo Keji Local Football Association - donate to help develop local football talent and strengthen community programs">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/gallery/kklfa.jpeg" alt="KKLFA Logo" style="height: 40px;">
+                </a>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="objectives.html">Objectives</a>
+                    <a href="committees.html">Committees</a>
+                    <a href="events.html">Events</a>
+                    <a href="players.html">Players</a>
+                    <a href="match-schedule.html">Match Schedule</a>
+                    
+                    <div class="dropdown">
+                        <a href="#">More</a>
+                        <div class="dropdown-content">
+                            <a href="gallery.html">Gallery</a>
+                            <a href="fan-zone.html">Fan Zone</a>
+                            <a href="news.html">News</a>
+                            <a href="achievements.html">Achievements</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                    
+                    <a href="join.html" class="btn btn-primary">Join Us</a>
+                    <a href="donate.html" class="btn btn-secondary">Donate</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="background-color: var(--primary-color);">
+        <div class="container">
+            <div class="hero-content animate-on-scroll">
+                <h1>Support Our Mission</h1>
+                <p>Help us develop football talent and strengthen our community</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Donate Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Your Support Matters</h2>
+                <p>The impact of your donation on our community</p>
+            </div>
+            
+            <div class="grid grid-3 animate-on-scroll">
+                <!-- Reason 1 -->
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h3>Develop Local Talent</h3>
+                    <p>Your donation helps us identify and nurture young football talent in Kajo Keji County, providing coaching, equipment, and opportunities to play.</p>
+                </div>
+                
+                <!-- Reason 2 -->
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Support Education</h3>
+                    <p>We believe in developing the whole person. Your support helps fund our education program for young players, ensuring they excel both on and off the pitch.</p>
+                </div>
+                
+                <!-- Reason 3 -->
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Strengthen Community</h3>
+                    <p>Football brings people together. Your donation helps us use the power of sport to build social cohesion and community pride in Kajo Keji County.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Options Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ways to Support</h2>
+                <p>Choose how you'd like to contribute</p>
+            </div>
+            
+            <div class="donation-options animate-on-scroll">
+                <!-- Option 1: One-time Donation -->
+                <div class="donation-option active" id="one-time">
+                    <div class="donation-header">
+                        <h3>One-time Donation</h3>
+                        <p>Make a single contribution to support our work</p>
+                    </div>
+                    
+                    <div class="donation-form">
+                        <div class="amount-options">
+                            <button class="amount-btn" data-amount="10">$10</button>
+                            <button class="amount-btn" data-amount="25">$25</button>
+                            <button class="amount-btn active" data-amount="50">$50</button>
+                            <button class="amount-btn" data-amount="100">$100</button>
+                            <button class="amount-btn" data-amount="custom">Custom</button>
+                        </div>
+                        
+                        <div class="custom-amount" style="display: none;">
+                            <label for="custom-amount">Enter amount:</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" id="custom-amount" class="form-control" placeholder="Enter amount">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="payment-method">Payment Method</label>
+                            <select id="payment-method" class="form-control">
+                                <option value="credit-card">Credit Card</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="mobile-money">Mobile Money</option>
+                                <option value="bank-transfer">Bank Transfer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input type="checkbox" id="anonymous" class="form-check-input">
+                            <label for="anonymous" class="form-check-label">Make this donation anonymous</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block mt-4">Donate $50</button>
+                        
+                        <div class="secure-payment">
+                            <i class="fas fa-lock"></i> Secure payment processing
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Option 2: Monthly Donation -->
+                <div class="donation-option" id="monthly" style="display: none;">
+                    <div class="donation-header">
+                        <h3>Monthly Donation</h3>
+                        <p>Become a regular supporter with a monthly contribution</p>
+                    </div>
+                    
+                    <div class="donation-form">
+                        <div class="amount-options">
+                            <button class="amount-btn" data-amount="5">$5/mo</button>
+                            <button class="amount-btn" data-amount="10">$10/mo</button>
+                            <button class="amount-btn active" data-amount="20">$20/mo</button>
+                            <button class="amount-btn" data-amount="50">$50/mo</button>
+                            <button class="amount-btn" data-amount="custom">Custom</button>
+                        </div>
+                        
+                        <div class="custom-amount" style="display: none;">
+                            <label for="custom-amount-monthly">Enter monthly amount:</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" id="custom-amount-monthly" class="form-control" placeholder="Enter amount">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name-monthly">Full Name</label>
+                            <input type="text" id="name-monthly" class="form-control" placeholder="Your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email-monthly">Email Address</label>
+                            <input type="email" id="email-monthly" class="form-control" placeholder="Your email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="payment-method-monthly">Payment Method</label>
+                            <select id="payment-method-monthly" class="form-control">
+                                <option value="credit-card">Credit Card</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="mobile-money">Mobile Money</option>
+                                <option value="bank-transfer">Bank Transfer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input type="checkbox" id="anonymous-monthly" class="form-check-input">
+                            <label for="anonymous-monthly" class="form-check-label">Make this donation anonymous</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block mt-4">Donate $20/month</button>
+                        
+                        <div class="secure-payment">
+                            <i class="fas fa-lock"></i> Secure payment processing
+                        </div>
+                        
+                        <div class="monthly-note">
+                            <p>You can cancel your monthly donation at any time by contacting us.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Option 3: Sponsor a Player -->
+                <div class="donation-option" id="sponsor" style="display: none;">
+                    <div class="donation-header">
+                        <h3>Sponsor a Player</h3>
+                        <p>Support a specific player's development and education</p>
+                    </div>
+                    
+                    <div class="donation-form">
+                        <div class="form-group">
+                            <label for="player-category">Player Category</label>
+                            <select id="player-category" class="form-control">
+                                <option value="youth">Youth Player (U-17) - $30/month</option>
+                                <option value="senior">Senior Player - $50/month</option>
+                                <option value="women">Women's Team Player - $40/month</option>
+                                <option value="academy">Academy Player - $25/month</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="sponsorship-duration">Sponsorship Duration</label>
+                            <select id="sponsorship-duration" class="form-control">
+                                <option value="3">3 months</option>
+                                <option value="6">6 months</option>
+                                <option value="12" selected>12 months</option>
+                            </select>
+                        </div>
+                        
+                        <div class="sponsorship-total">
+                            <p>Total Sponsorship: <span class="total-amount">$360</span></p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name-sponsor">Full Name</label>
+                            <input type="text" id="name-sponsor" class="form-control" placeholder="Your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email-sponsor">Email Address</label>
+                            <input type="email" id="email-sponsor" class="form-control" placeholder="Your email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="payment-method-sponsor">Payment Method</label>
+                            <select id="payment-method-sponsor" class="form-control">
+                                <option value="credit-card">Credit Card</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="mobile-money">Mobile Money</option>
+                                <option value="bank-transfer">Bank Transfer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="sponsorship-benefits">
+                            <h4>As a player sponsor, you'll receive:</h4>
+                            <ul>
+                                <li>Regular updates on your sponsored player's progress</li>
+                                <li>A personalized thank you letter from the player</li>
+                                <li>Recognition on our website and match programs</li>
+                                <li>Invitation to special sponsor events</li>
+                            </ul>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block mt-4">Sponsor a Player</button>
+                        
+                        <div class="secure-payment">
+                            <i class="fas fa-lock"></i> Secure payment processing
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Option 4: Equipment Donation -->
+                <div class="donation-option" id="equipment" style="display: none;">
+                    <div class="donation-header">
+                        <h3>Donate Equipment</h3>
+                        <p>Contribute football equipment and supplies</p>
+                    </div>
+                    
+                    <div class="donation-form">
+                        <div class="equipment-needs">
+                            <h4>Current Equipment Needs:</h4>
+                            <ul>
+                                <li>Footballs (Size 5 and Size 4)</li>
+                                <li>Football boots (all sizes)</li>
+                                <li>Training bibs and cones</li>
+                                <li>Goalkeeper gloves</li>
+                                <li>Team kits (shirts, shorts, socks)</li>
+                                <li>First aid supplies</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="equipment-type">Equipment Type</label>
+                            <input type="text" id="equipment-type" class="form-control" placeholder="What equipment would you like to donate?">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="equipment-quantity">Quantity</label>
+                            <input type="number" id="equipment-quantity" class="form-control" placeholder="How many items?">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="equipment-condition">Condition</label>
+                            <select id="equipment-condition" class="form-control">
+                                <option value="new">New</option>
+                                <option value="like-new">Like New</option>
+                                <option value="good">Good</option>
+                                <option value="used">Used</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name-equipment">Full Name</label>
+                            <input type="text" id="name-equipment" class="form-control" placeholder="Your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email-equipment">Email Address</label>
+                            <input type="email" id="email-equipment" class="form-control" placeholder="Your email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone-equipment">Phone Number</label>
+                            <input type="tel" id="phone-equipment" class="form-control" placeholder="Your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="delivery-method">Delivery Method</label>
+                            <select id="delivery-method" class="form-control">
+                                <option value="drop-off">Drop off at KKLFA office</option>
+                                <option value="collection">Request collection</option>
+                                <option value="shipping">Ship to KKLFA address</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block mt-4">Submit Equipment Donation</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="donation-tabs animate-on-scroll">
+                <button class="donation-tab active" data-option="one-time">One-time Donation</button>
+                <button class="donation-tab" data-option="monthly">Monthly Donation</button>
+                <button class="donation-tab" data-option="sponsor">Sponsor a Player</button>
+                <button class="donation-tab" data-option="equipment">Donate Equipment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Your Impact</h2>
+                <p>See how donations are making a difference</p>
+            </div>
+            
+            <div class="impact-grid animate-on-scroll">
+                <!-- Impact 1 -->
+                <div class="impact-card">
+                    <div class="impact-image">
+                        <img src="images/gallery/official1.jpeg" alt="Youth training session">
+                    </div>
+                    <div class="impact-content">
+                        <h3>Youth Development</h3>
+                        <p>Your donations have helped us establish a structured youth development program that now serves over 200 young players across different age groups.</p>
+                        <div class="impact-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">Youth Players</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Impact 2 -->
+                <div class="impact-card">
+                    <div class="impact-image">
+                        <img src="images/gallery/fan2.jpeg" alt="New football pitch">
+                    </div>
+                    <div class="impact-content">
+                        <h3>Improved Facilities</h3>
+                        <p>Donations have funded the development of 5 community football pitches across Kajo Keji County, providing safe spaces for training and matches.</p>
+                        <div class="impact-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-futbol"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">5</span>
+                                <span class="stat-label">New Pitches</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Impact 3 -->
+                <div class="impact-card">
+                    <div class="impact-image">
+                        <img src="images/gallery/fan3.jpeg" alt="Coach training session">
+                    </div>
+                    <div class="impact-content">
+                        <h3>Coach Education</h3>
+                        <p>We've been able to provide professional coaching education to 25 local coaches, improving the quality of training for all players in our programs.</p>
+                        <div class="impact-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">25</span>
+                                <span class="stat-label">Trained Coaches</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Impact 4 -->
+                <div class="impact-card">
+                    <div class="impact-image">
+                        <img src="images/gallery/fan4.jpeg" alt="Women's team">
+                    </div>
+                    <div class="impact-content">
+                        <h3>Women's Football</h3>
+                        <p>Your support has helped us establish and grow women's football in Kajo Keji, with two competitive women's teams now participating in regional competitions.</p>
+                        <div class="impact-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-female"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">2</span>
+                                <span class="stat-label">Women's Teams</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donor Recognition Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Supporters</h2>
+                <p>Thank you to all who have contributed to our mission</p>
+            </div>
+            
+            <div class="donor-categories animate-on-scroll">
+                <!-- Platinum Donors -->
+                <div class="donor-category">
+                    <h3 class="donor-level">Platinum Supporters</h3>
+                    <div class="donor-list">
+                        <div class="donor platinum">
+                            <img src="images/gallery/fan6.jpeg" alt="South Sudan Football Association">
+                            <span>South Sudan Football Association</span>
+                        </div>
+                        <div class="donor platinum">
+                            <img src="images/gallery/fan7.jpeg" alt="Ministry of Youth and Sports">
+                            <span>Ministry of Youth and Sports</span>
+                        </div>
+                        <div class="donor platinum">
+                            <img src="images/gallery/official2.jpeg" alt="International Sports NGO">
+                            <span>International Sports for Development NGO</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gold Donors -->
+                <div class="donor-category">
+                    <h3 class="donor-level">Gold Supporters</h3>
+                    <div class="donor-list">
+                        <div class="donor gold">
+                            <span>Kajo Keji Business Association</span>
+                        </div>
+                        <div class="donor gold">
+                            <span>Central Equatoria State Government</span>
+                        </div>
+                        <div class="donor gold">
+                            <span>Juba United Bank</span>
+                        </div>
+                        <div class="donor gold">
+                            <span>South Sudan Telecom</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Silver Donors -->
+                <div class="donor-category">
+                    <h3 class="donor-level">Silver Supporters</h3>
+                    <div class="donor-list">
+                        <div class="donor silver">
+                            <span>Kajo Keji Community Association</span>
+                        </div>
+                        <div class="donor silver">
+                            <span>Local Merchants Association</span>
+                        </div>
+                        <div class="donor silver">
+                            <span>Juba Sports Equipment</span>
+                        </div>
+                        <div class="donor silver">
+                            <span>Central Hotel Kajo Keji</span>
+                        </div>
+                        <div class="donor silver">
+                            <span>South Sudan Airways</span>
+                        </div>
+                        <div class="donor silver">
+                            <span>Unity Insurance Group</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Individual Donors -->
+                <div class="donor-category">
+                    <h3 class="donor-level">Individual Supporters</h3>
+                    <div class="donor-list individual">
+                        <span>James Lemi</span>
+                        <span>Sarah Kenyi</span>
+                        <span>David Ladu</span>
+                        <span>Mary Lojore</span>
+                        <span>John Taban</span>
+                        <span>Elizabeth Keji</span>
+                        <span>Peter Lado</span>
+                        <span>Grace Yei</span>
+                        <span>Michael Juba</span>
+                        <span>Victoria Nimule</span>
+                        <span>And many more...</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="become-donor animate-on-scroll">
+                <h3>Join Our Supporters</h3>
+                <p>Your name could be on this list. Every contribution, no matter the size, makes a difference.</p>
+                <a href="#donation-options" class="btn btn-primary">Donate Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Partnerships Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Corporate Partnerships</h2>
+                <p>Opportunities for businesses to support our mission</p>
+            </div>
+            
+            <div class="partnership-options animate-on-scroll">
+                <!-- Partnership 1 -->
+                <div class="partnership-card">
+                    <div class="partnership-header">
+                        <h3>Team Sponsorship</h3>
+                        <div class="partnership-badge">Most Popular</div>
+                    </div>
+                    <div class="partnership-content">
+                        <p>Sponsor one of our teams with your company logo on team kits, training equipment, and match day materials.</p>
+                        <ul class="partnership-benefits">
+                            <li>Logo on team kits and training gear</li>
+                            <li>Branding at home matches</li>
+                            <li>Recognition in match programs</li>
+                            <li>Social media promotion</li>
+                            <li>Team appearances at corporate events</li>
+                        </ul>
+                        <div class="partnership-cta">
+                            <a href="contact.html" class="btn btn-primary">Inquire About Sponsorship</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Partnership 2 -->
+                <div class="partnership-card">
+                    <div class="partnership-header">
+                        <h3>Event Sponsorship</h3>
+                    </div>
+                    <div class="partnership-content">
+                        <p>Sponsor a KKLFA tournament, match day, or community event with prominent branding and recognition.</p>
+                        <ul class="partnership-benefits">
+                            <li>Event naming rights</li>
+                            <li>Branding throughout event venue</li>
+                            <li>Promotional booth at event</li>
+                            <li>Logo on event materials</li>
+                            <li>Media coverage and social media promotion</li>
+                        </ul>
+                        <div class="partnership-cta">
+                            <a href="contact.html" class="btn btn-primary">Inquire About Sponsorship</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Partnership 3 -->
+                <div class="partnership-card">
+                    <div class="partnership-header">
+                        <h3>Facility Sponsorship</h3>
+                    </div>
+                    <div class="partnership-content">
+                        <p>Support the development and maintenance of our football facilities with naming rights and permanent recognition.</p>
+                        <ul class="partnership-benefits">
+                            <li>Facility naming rights</li>
+                            <li>Permanent signage at facility</li>
+                            <li>Recognition in all KKLFA communications</li>
+                            <li>Use of facility for corporate events</li>
+                            <li>Long-term community impact</li>
+                        </ul>
+                        <div class="partnership-cta">
+                            <a href="contact.html" class="btn btn-primary">Inquire About Sponsorship</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="custom-partnerships animate-on-scroll">
+                <h3>Custom Partnership Opportunities</h3>
+                <p>We're open to creative partnership ideas that align with your company's values and objectives. Contact us to discuss custom sponsorship opportunities.</p>
+                <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about donating to KKLFA</p>
+            </div>
+            
+            <div class="faq-container animate-on-scroll">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How is my donation used?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your donation directly supports our programs in youth development, facility improvement, coach education, equipment provision, and community outreach. We allocate funds based on current needs, with approximately:</p>
+                        <ul>
+                            <li>40% to youth development programs</li>
+                            <li>25% to facility development and maintenance</li>
+                            <li>15% to equipment and supplies</li>
+                            <li>10% to coach and referee education</li>
+                            <li>10% to administrative costs</li>
+                        </ul>
+                        <p>We provide annual reports to all donors detailing how funds have been used.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my donation tax-deductible?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>KKLFA is registered as a non-profit sports organization in South Sudan. For South Sudanese taxpayers, donations are tax-deductible according to current regulations. For international donors, tax deductibility depends on your country's laws regarding foreign charitable donations. We recommend consulting with a tax professional for specific advice.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I specify how my donation is used?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can designate your donation for specific programs or initiatives. When making your donation, simply indicate your preference in the notes section or select one of our specific donation options like player sponsorship. If you have a particular area of interest not listed, please contact us directly to discuss your preferences.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I donate equipment?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can donate equipment by selecting the "Donate Equipment" option on this page and filling out the form. Alternatively, you can contact us directly to arrange equipment donations. We accept new and gently used football equipment including balls, boots, kits, training gear, and first aid supplies. We can arrange collection for large donations or provide our address for shipping or drop-off.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I volunteer instead of donating money?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We welcome volunteers in many capacities, including coaching, event organization, administration, and more. Your time and skills are valuable contributions to our mission. Please visit our <a href="join.html">Join the Team</a> page for information about volunteer opportunities, or contact us directly to discuss how you can help.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I verify that KKLFA is a legitimate organization?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>KKLFA is officially registered with the South Sudan Ministry of Youth and Sports and the South Sudan Football Association. We maintain transparent financial records and publish annual reports. You can verify our status by contacting these organizations directly. We also encourage potential donors to visit our facilities and meet our team in person. For any verification concerns, please contact our administrative office.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Need More Information?</h2>
+                <p>We're here to answer your questions about supporting KKLFA</p>
+            </div>
+            
+            <div class="contact-options animate-on-scroll">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>For donation inquiries or questions:</p>
+                    <a href="mailto:donations@kklfa.org">donations@kklfa.org</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Speak with our donations team:</p>
+                    <a href="tel:+211 928 907 865">+211 928 907 865</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>KKLFA Administrative Office:</p>
+                    <address>Kajo Keji Stadium, Main Road<br>Kajo Keji County, Central Equatoria State<br>South Sudan</address>
+                </div>
+            </div>
+            
+            <div class="contact-form-container animate-on-scroll">
+                <h3>Send Us a Message</h3>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-name">Full Name</label>
+                            <input type="text" id="contact-name" class="form-control" placeholder="Your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" class="form-control" placeholder="Your email address">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" class="form-control" placeholder="Subject of your message">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" class="form-control" rows="5" placeholder="Your message"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="cta-box animate-on-scroll" style="background-color: var(--primary-color); color: white; padding: 3rem; border-radius: 8px; text-align: center;">
+                <h2>Stay Updated</h2>
+                <p class="mb-4">Subscribe to our newsletter to receive updates on our programs, impact stories, and donation opportunities.</p>
+                
+                <form class="newsletter-form">
+                    <div class="form-group-inline">
+                        <input type="email" placeholder="Your email address" class="form-control" required>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </div>
+                    <div class="form-check mt-2">
+                        <input type="checkbox" id="terms" class="form-check-input" required>
+                        <label for="terms" class="form-check-label">I agree to receive emails from KKLFA and accept the <a href="#" style="color: white; text-decoration: underline;">privacy policy</a></label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo">
+                            <img src="images/gallery/kklfa.jpeg" alt="KKLFA Logo" style="height: 40px;">
+                        </a>
+                    </div>
+                    <p>Promoting football excellence and community development in Kajo Keji County, South Sudan.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1F9a8gZ4jE"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@kajokejifa?si=ndn2SZHPyPT-CbME"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="match-schedule.html">Match Schedule</a></li>
+                        <li><a href="players.html">Players</a></li>
+                        <li><a href="join.html">Join the Team</a></li>
+                        <li><a href="donate.html">Support Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> kklfa2023@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +211 928 907 865</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kajo Keji County, Central Equatoria State, South Sudan</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kajo Keji Local Football Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Donation tabs functionality
+            const donationTabs = document.querySelectorAll('.donation-tab');
+            const donationOptions = document.querySelectorAll('.donation-option');
+            
+            donationTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    donationTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    // Get option value
+                    const option = tab.getAttribute('data-option');
+                    
+                    // Show selected option, hide others
+                    donationOptions.forEach(opt => {
+                        if (opt.id === option) {
+                            opt.style.display = 'block';
+                        } else {
+                            opt.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Amount buttons functionality
+            const amountButtons = document.querySelectorAll('.amount-btn');
+            
+            amountButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Get parent donation option
+                    const parent = button.closest('.donation-option');
+                    
+                    // Remove active class from all buttons in this option
+                    parent.querySelectorAll('.amount-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Get amount value
+                    const amount = button.getAttribute('data-amount');
+                    
+                    // Handle custom amount
+                    if (amount === 'custom') {
+                        parent.querySelector('.custom-amount').style.display = 'block';
+                    } else {
+                        parent.querySelector('.custom-amount').style.display = 'none';
+                        
+                        // Update donate button text
+                        const donateButton = parent.querySelector('.btn-block');
+                        if (parent.id === 'one-time') {
+                            donateButton.textContent = `Donate $${amount}`;
+                        } else if (parent.id === 'monthly') {
+                            donateButton.textContent = `Donate $${amount}/month`;
+                        }
+                    }
+                });
+            });
+            
+            // Custom amount input functionality
+            const customAmountInputs = document.querySelectorAll('.custom-amount input');
+            
+            customAmountInputs.forEach(input => {
+                input.addEventListener('input', () => {
+                    // Get parent donation option
+                    const parent = input.closest('.donation-option');
+                    
+                    // Get amount value
+                    const amount = input.value;
+                    
+                    // Update donate button text
+                    const donateButton = parent.querySelector('.btn-block');
+                    if (parent.id === 'one-time') {
+                        donateButton.textContent = `Donate $${amount}`;
+                    } else if (parent.id === 'monthly') {
+                        donateButton.textContent = `Donate $${amount}/month`;
+                    }
+                });
+            });
+            
+            // Player sponsorship calculation
+            const playerCategory = document.getElementById('player-category');
+            const sponsorshipDuration = document.getElementById('sponsorship-duration');
+            const totalAmount = document.querySelector('.total-amount');
+            
+            function calculateSponsorship() {
+                if (!playerCategory || !sponsorshipDuration || !totalAmount) return;
+                
+                let monthlyRate = 30; // Default
+                
+                // Get monthly rate based on selected category
+                switch (playerCategory.value) {
+                    case 'youth':
+                        monthlyRate = 30;
+                        break;
+                    case 'senior':
+                        monthlyRate = 50;
+                        break;
+                    case 'women':
+                        monthlyRate = 40;
+                        break;
+                    case 'academy':
+                        monthlyRate = 25;
+                        break;
+                }
+                
+                // Calculate total
+                const duration = parseInt(sponsorshipDuration.value);
+                const total = monthlyRate * duration;
+                
+                // Update total amount
+                totalAmount.textContent = `$${total}`;
+            }
+            
+            if (playerCategory && sponsorshipDuration) {
+                playerCategory.addEventListener('change', calculateSponsorship);
+                sponsorshipDuration.addEventListener('change', calculateSponsorship);
+            }
+            
+            // FAQ functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    // Toggle active class
+                    question.classList.toggle('active');
+                    
+                    // Get answer element
+                    const answer = question.nextElementSibling;
+                    
+                    // Toggle answer visibility
+                    if (question.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        question.querySelector('i').className = 'fas fa-chevron-up';
+                    } else {
+                        answer.style.maxHeight = '0';
+                        question.querySelector('i').className = 'fas fa-chevron-down';
+                    }
+                });
+            });
+            
+            // Style reason cards
+            const reasonCards = document.querySelectorAll('.reason-card');
+            reasonCards.forEach(card => {
+                card.style.backgroundColor = 'white';
+                card.style.borderRadius = '8px';
+                card.style.padding = '2rem';
+                card.style.textAlign = 'center';
+                card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+            });
+            
+            // Add hover effect to reason cards
+            reasonCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-5px)';
+                    card.style.boxShadow = '0 10px 15px rgba(0, 0, 0, 0.1)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                });
+            });
+            
+            // Style reason icons
+            const reasonIcons = document.querySelectorAll('.reason-icon');
+            reasonIcons.forEach(icon => {
+                icon.style.width = '80px';
+                icon.style.height = '80px';
+                icon.style.borderRadius = '50%';
+                icon.style.backgroundColor = 'var(--primary-color)';
+                icon.style.color = 'white';
+                icon.style.display = 'flex';
+                icon.style.alignItems = 'center';
+                icon.style.justifyContent = 'center';
+                icon.style.margin = '0 auto 1.5rem';
+                icon.style.fontSize = '2rem';
+            });
+            
+            // Style donation options
+            const donationOptionsContainer = document.querySelector('.donation-options');
+            if (donationOptionsContainer) {
+                donationOptionsContainer.style.backgroundColor = 'white';
+                donationOptionsContainer.style.borderRadius = '8px';
+                donationOptionsContainer.style.padding = '2rem';
+                donationOptionsContainer.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                donationOptionsContainer.style.marginBottom = '2rem';
+            }
+            
+            // Style donation tabs
+            const donationTabsContainer = document.querySelector('.donation-tabs');
+            if (donationTabsContainer) {
+                donationTabsContainer.style.display = 'flex';
+                donationTabsContainer.style.flexWrap = 'wrap';
+                donationTabsContainer.style.gap = '1rem';
+                donationTabsContainer.style.justifyContent = 'center';
+            }
+            
+            donationTabs.forEach(tab => {
+                tab.style.padding = '0.75rem 1.5rem';
+                tab.style.borderRadius = '4px';
+                tab.style.backgroundColor = '#f8f9fa';
+                tab.style.cursor = 'pointer';
+                tab.style.transition = 'all 0.3s ease';
+                
+                // Style active tab
+                if (tab.classList.contains('active')) {
+                    tab.style.backgroundColor = 'var(--primary-color)';
+                    tab.style.color = 'white';
+                }
+                
+                // Add hover effect
+                tab.addEventListener('mouseenter', () => {
+                    if (!tab.classList.contains('active')) {
+                        tab.style.backgroundColor = '#e9ecef';
+                    }
+                });
+                
+                tab.addEventListener('mouseleave', () => {
+                    if (!tab.classList.contains('active')) {
+                        tab.style.backgroundColor = '#f8f9fa';
+                    }
+                });
+            });
+            
+            // Style donation headers
+            const donationHeaders = document.querySelectorAll('.donation-header');
+            donationHeaders.forEach(header => {
+                header.style.marginBottom = '2rem';
+                header.style.textAlign = 'center';
+            });
+            
+            // Style amount options
+            const amountOptionsContainers = document.querySelectorAll('.amount-options');
+            amountOptionsContainers.forEach(container => {
+                container.style.display = 'flex';
+                container.style.flexWrap = 'wrap';
+                container.style.gap = '1rem';
+                container.style.justifyContent = 'center';
+                container.style.marginBottom = '2rem';
+            });
+            
+            amountButtons.forEach(button => {
+                button.style.padding = '0.75rem 1.5rem';
+                button.style.borderRadius = '4px';
+                button.style.backgroundColor = '#f8f9fa';
+                button.style.cursor = 'pointer';
+                button.style.transition = 'all 0.3s ease';
+                button.style.border = 'none';
+                
+                // Style active button
+                if (button.classList.contains('active')) {
+                    button.style.backgroundColor = 'var(--primary-color)';
+                    button.style.color = 'white';
+                }
+                
+                // Add hover effect
+                button.addEventListener('mouseenter', () => {
+                    if (!button.classList.contains('active')) {
+                        button.style.backgroundColor = '#e9ecef';
+                    }
+                });
+                
+                button.addEventListener('mouseleave', () => {
+                    if (!button.classList.contains('active')) {
+                        button.style.backgroundColor = '#f8f9fa';
+                    }
+                });
+            });
+            
+            // Style impact cards
+            const impactCards = document.querySelectorAll('.impact-card');
+            impactCards.forEach(card => {
+                card.style.backgroundColor = 'white';
+                card.style.borderRadius = '8px';
+                card.style.overflow = 'hidden';
+                card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+            });
+            
+            // Add hover effect to impact cards
+            impactCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-5px)';
+                    card.style.boxShadow = '0 10px 15px rgba(0, 0, 0, 0.1)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                });
+            });
+            
+            // Style impact images
+            const impactImages = document.querySelectorAll('.impact-image');
+            impactImages.forEach(image => {
+                image.style.height = '200px';
+                image.style.overflow = 'hidden';
+                
+                // Style the img element
+                const img = image.querySelector('img');
+                if (img) {
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'cover';
+                }
+            });
+            
+            // Style impact content
+            const impactContent = document.querySelectorAll('.impact-content');
+            impactContent.forEach(content => {
+                content.style.padding = '1.5rem';
+            });
+            
+            // Style impact stats
+            const impactStats = document.querySelectorAll('.impact-stat');
+            impactStats.forEach(stat => {
+                stat.style.display = 'flex';
+                stat.style.alignItems = 'center';
+                stat.style.marginTop = '1rem';
+            });
+            
+            // Style stat icons
+            const statIcons = document.querySelectorAll('.stat-icon');
+            statIcons.forEach(icon => {
+                icon.style.width = '40px';
+                icon.style.height = '40px';
+                icon.style.borderRadius = '50%';
+                icon.style.backgroundColor = 'var(--primary-color)';
+                icon.style.color = 'white';
+                icon.style.display = 'flex';
+                icon.style.alignItems = 'center';
+                icon.style.justifyContent = 'center';
+                icon.style.marginRight = '1rem';
+            });
+            
+            // Style stat info
+            const statInfo = document.querySelectorAll('.stat-info');
+            statInfo.forEach(info => {
+                info.style.display = 'flex';
+                info.style.flexDirection = 'column';
+            });
+            
+            // Style stat numbers
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(number => {
+                number.style.fontWeight = 'bold';
+                number.style.fontSize = '1.25rem';
+                number.style.color = 'var(--primary-color)';
+            });
+            
+            // Style donor categories
+            const donorCategories = document.querySelectorAll('.donor-category');
+            donorCategories.forEach(category => {
+                category.style.marginBottom = '2rem';
+            });
+            
+            // Style donor levels
+            const donorLevels = document.querySelectorAll('.donor-level');
+            donorLevels.forEach(level => {
+                level.style.borderBottom = '2px solid var(--primary-color)';
+                level.style.paddingBottom = '0.5rem';
+                level.style.marginBottom = '1rem';
+            });
+            
+            // Style donor lists
+            const donorLists = document.querySelectorAll('.donor-list');
+            donorLists.forEach(list => {
+                list.style.display = 'flex';
+                list.style.flexWrap = 'wrap';
+                list.style.gap = '1rem';
+            });
+            
+            // Style donors
+            const donors = document.querySelectorAll('.donor');
+            donors.forEach(donor => {
+                donor.style.padding = '0.75rem 1rem';
+                donor.style.borderRadius = '4px';
+                donor.style.display = 'flex';
+                donor.style.alignItems = 'center';
+                donor.style.gap = '0.5rem';
+                
+                // Style based on donor level
+                if (donor.classList.contains('platinum')) {
+                    donor.style.backgroundColor = '#e5e5e5';
+                } else if (donor.classList.contains('gold')) {
+                    donor.style.backgroundColor = '#fff9e6';
+                } else if (donor.classList.contains('silver')) {
+                    donor.style.backgroundColor = '#f8f9fa';
+                }
+            });
+            
+            // Style individual donors list
+            const individualDonorList = document.querySelector('.donor-list.individual');
+            if (individualDonorList) {
+                individualDonorList.style.display = 'flex';
+                individualDonorList.style.flexWrap = 'wrap';
+                individualDonorList.style.gap = '0.5rem';
+            }
+            
+            // Style individual donor names
+            const individualDonors = document.querySelectorAll('.donor-list.individual span');
+            individualDonors.forEach(donor => {
+                donor.style.padding = '0.5rem 1rem';
+                donor.style.backgroundColor = '#f8f9fa';
+                donor.style.borderRadius = '4px';
+            });
+            
+            // Style partnership cards
+            const partnershipCards = document.querySelectorAll('.partnership-card');
+            partnershipCards.forEach(card => {
+                card.style.backgroundColor = 'white';
+                card.style.borderRadius = '8px';
+                card.style.overflow = 'hidden';
+                card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                card.style.marginBottom = '2rem';
+            });
+            
+            // Style partnership headers
+            const partnershipHeaders = document.querySelectorAll('.partnership-header');
+            partnershipHeaders.forEach(header => {
+                header.style.backgroundColor = 'var(--primary-color)';
+                header.style.color = 'white';
+                header.style.padding = '1.5rem';
+                header.style.position = 'relative';
+            });
+            
+            // Style partnership badges
+            const partnershipBadges = document.querySelectorAll('.partnership-badge');
+            partnershipBadges.forEach(badge => {
+                badge.style.position = 'absolute';
+                badge.style.top = '0';
+                badge.style.right = '0';
+                badge.style.backgroundColor = 'var(--secondary-color)';
+                badge.style.color = 'white';
+                badge.style.padding = '0.25rem 0.5rem';
+                badge.style.fontSize = '0.75rem';
+                badge.style.fontWeight = 'bold';
+                badge.style.borderBottomLeftRadius = '4px';
+            });
+            
+            // Style partnership content
+            const partnershipContent = document.querySelectorAll('.partnership-content');
+            partnershipContent.forEach(content => {
+                content.style.padding = '1.5rem';
+            });
+            
+            // Style partnership benefits
+            const partnershipBenefits = document.querySelectorAll('.partnership-benefits');
+            partnershipBenefits.forEach(benefits => {
+                benefits.style.marginTop = '1rem';
+                benefits.style.marginBottom = '1.5rem';
+            });
+            
+            // Style partnership CTA
+            const partnershipCTA = document.querySelectorAll('.partnership-cta');
+            partnershipCTA.forEach(cta => {
+                cta.style.marginTop = '1.5rem';
+                cta.style.textAlign = 'center';
+            });
+            
+            // Style FAQ items
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                item.style.marginBottom = '1rem';
+                item.style.borderRadius = '8px';
+                item.style.overflow = 'hidden';
+                item.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+            });
+            
+            // Style FAQ questions
+            faqQuestions.forEach(question => {
+                question.style.backgroundColor = 'white';
+                question.style.padding = '1.5rem';
+                question.style.cursor = 'pointer';
+                question.style.display = 'flex';
+                question.style.justifyContent = 'space-between';
+                question.style.alignItems = 'center';
+            });
+            
+            // Style FAQ answers
+            const faqAnswers = document.querySelectorAll('.faq-answer');
+            faqAnswers.forEach(answer => {
+                answer.style.backgroundColor = '#f8f9fa';
+                answer.style.padding = '0 1.5rem';
+                answer.style.maxHeight = '0';
+                answer.style.overflow = 'hidden';
+                answer.style.transition = 'max-height 0.3s ease';
+            });
+            
+            // Style contact cards
+            const contactCards = document.querySelectorAll('.contact-card');
+            contactCards.forEach(card => {
+                card.style.backgroundColor = 'white';
+                card.style.borderRadius = '8px';
+                card.style.padding = '2rem';
+                card.style.textAlign = 'center';
+                card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            });
+            
+            // Style contact icons
+            const contactIcons = document.querySelectorAll('.contact-icon');
+            contactIcons.forEach(icon => {
+                icon.style.width = '60px';
+                icon.style.height = '60px';
+                icon.style.borderRadius = '50%';
+                icon.style.backgroundColor = 'var(--primary-color)';
+                icon.style.color = 'white';
+                icon.style.display = 'flex';
+                icon.style.alignItems = 'center';
+                icon.style.justifyContent = 'center';
+                icon.style.margin = '0 auto 1.5rem';
+                icon.style.fontSize = '1.5rem';
+            });
+            
+            // Style contact form container
+            const contactFormContainer = document.querySelector('.contact-form-container');
+            if (contactFormContainer) {
+                contactFormContainer.style.backgroundColor = 'white';
+                contactFormContainer.style.borderRadius = '8px';
+                contactFormContainer.style.padding = '2rem';
+                contactFormContainer.style.marginTop = '2rem';
+                contactFormContainer.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            }
+            
+            // Style form rows
+            const formRows = document.querySelectorAll('.form-row');
+            formRows.forEach(row => {
+                row.style.display = 'flex';
+                row.style.gap = '1rem';
+                row.style.marginBottom = '1rem';
+                
+                // Make responsive
+                if (window.innerWidth < 768) {
+                    row.style.flexDirection = 'column';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
